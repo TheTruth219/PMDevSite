@@ -1,0 +1,13 @@
+{
+    "LandingPage":[
+        {
+            "Navigation":["Home","About","Blog","Contact"]
+        },
+        {
+            "Hero":[
+                {"title_1":"Product"},
+                {"title_2":"Dev Life"}
+                ]
+        }
+    ]
+}
