@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import MainNav from "./mainNav"
+import Contact from "./contact"
 import "./layout.css"
 
 
@@ -25,6 +26,7 @@ const Layout = ({ data,children,main }) => {
         }}
       >
         <main>{children}</main>
+        <Contact/>
         <footer style={{
           margin:`auto`,
           textAlign:`center`,
