@@ -20,7 +20,7 @@ export default function MainNav ({data,main}) {
   
   if (main) {
       pageNavLinks = data.map( (header,index) => 
-      <LinkBase key={index}><Link to={header === "Home"?"/":"/"+header}>{header}</Link></LinkBase>)
+      <LinkBase key={index}><Link to={header !== "Home" && header !== "Blog"? "/#"+header: header ==="Home"? "/":"/"+header}>{header}</Link></LinkBase>)
   } else {
     pageNavLinks = data.map( (header,index) => 
       <LinkBase key={index}><Link to={header === "Home"?"/":"/#"+header}>{header}</Link></LinkBase>)
@@ -30,7 +30,7 @@ export default function MainNav ({data,main}) {
 
 return (
   <nav style={{backgroundColor:"black"}}>
-    <ul style={{display:"flex", listStyleType:"none"}}>{pageNavLinks}</ul> 
+    <ul style={{display:"flex", listStyleType:"none",marginBottom:"0"}}>{pageNavLinks}</ul> 
   </nav>
 )
 

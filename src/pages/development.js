@@ -8,12 +8,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const Product = () => (
-  <Layout data={data.Product[0].Navigation}>
+  <Layout data={data.Navigation}>
     <SEO title="Product" />
     <Hero src="https://via.placeholder.com/1200x360">
     </Hero>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
+
 
 export default Product;

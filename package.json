@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "pm-dev-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A Hybrid Portfolio site",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Stephen Powers",
   "dependencies": {
     "gatsby": "^2.13.63",
     "gatsby-image": "^2.2.8",
