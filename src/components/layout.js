@@ -17,7 +17,6 @@ const Layout = ({ data,children,main }) => {
   return (
     
     <>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <MainNav main={main} data={data}/>
       <div
         style={{

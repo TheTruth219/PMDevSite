@@ -11,7 +11,7 @@ const LinkBase = styled.li`
 
   a{
     text-decoration:none;
-    color: grey;
+    color: white;
   }
 
 `

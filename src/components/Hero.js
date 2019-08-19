@@ -5,11 +5,9 @@ import { Link } from "gatsby"
 
 
 const HeroBase = styled.div`
-min-height: 20em;
 min-width: 100vw;
 display:flex;
 position: relative;
-background: linear-gradient(to bottom, transparent 90%,white 100%); 
 a {
     width: 42.5%;
     height: 100%;
