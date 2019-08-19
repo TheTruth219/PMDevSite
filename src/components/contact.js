@@ -1,6 +1,5 @@
 import PropTypes from "prop-types"
 import React from "react"
-import ReactContactForm from 'react-mail-form';
 import styled from "styled-components"
 
 
@@ -9,22 +8,10 @@ const ContactBase = styled.div`
   display:flex;
   flex-direction:column;
 
-  .contact_fields {
-    display:flex;
-    flex-direction:column;
-    width:40%;
-    min-width: 272px;
-    align-self: center;
-  }
-  h1{
+  h3{
     text-align: center;
+    padding:0 20px;
     margin-top: 20px;
-  }
-  input, textarea {
-    padding: 5px 10px;
-    margin: 1em 0;
-    border: 1px inset grey;
-    border-radius: 5px;
   }
   a{
     text-decoration: none;
@@ -35,9 +22,6 @@ const ContactBase = styled.div`
     margin: 5px auto 25px auto;
     padding: 6px 17px;
   }
-  
-
-
 
 `
 export default function Contact () {
@@ -46,11 +30,8 @@ export default function Contact () {
 
 return (
   <ContactBase>
-    <h1 id="contact">Contact Me</h1>
-    <ReactContactForm 
-    to="stephen@cloudpoweredtech.com"
-    className="contact_fields"
-    />
+    <h3 id="contact">Interested in working together or just grabbing a cup of coffee?</h3>
+    <a href="mailto:stephen@cloudpoweredtech.com?subject=We%20Should%20Talk%20Soon" role="button">Contact me</a>
   </ContactBase>
 )
 
