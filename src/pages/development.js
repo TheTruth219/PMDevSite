@@ -1,20 +1,18 @@
 import React from "react"
 import Hero from "../components/Hero"
-import {Link} from "gatsby"
-import data from "../data/productHP.json"
-
-
+import About from "../components/about"
+import Methods from "../components/devMethods"
+import data from "../data/developmentHP.json"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Product = () => (
-  <Layout data={data.Navigation}>
-    <SEO title="Product" />
-    <Hero src="https://via.placeholder.com/1200x360">
+const Development = () => (
+  <Layout data={data.Development[0].Navigation}>
+    <SEO title="Development" />
+    <Hero src="./static/4k-wallpaper-blur-close-up-2763927.jpg">
     </Hero>
-    <Link to="/">Go back to the homepage</Link>
+    <About data={data.Development[2].About}/>
+    <Methods data={data.Development[3].Methods}/>
   </Layout>
 )
-
-
-export default Product;
+export default Development;

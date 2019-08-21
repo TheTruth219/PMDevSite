@@ -1,18 +1,22 @@
 
 import React,{Component} from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+import HeroImage from "./heroImage"
+
+
 
 
 const HeroBase = styled.div`
-min-height: 20em;
-min-width: 100vw;
+
 display:flex;
 position: relative;
-background: linear-gradient(to bottom, transparent 90%,white 100%); 
+align-items:center;
+margin:auto;
+margin-top:60px;
 a {
-    width: 42.5%;
-    height: 100%;
+    width: 38.5%;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +36,8 @@ a {
     animation-name: fadeOut;
     animation-duration: 1500ms;
     animation-fill-mode: forwards;
+    animation-delay: .3s;
+    
 }
 @keyframes fadeOut {
     0% {
@@ -44,8 +50,9 @@ a {
 
   .fadeIn{
     animation-name: fadeIn;
-    animation-duration: 1000ms;
+    animation-duration: 1500ms;
     animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out
 }
 @keyframes fadeIn {
     0% {
@@ -60,39 +67,44 @@ a {
 
 
 export default class Hero extends Component {
-     
+
+    constructor(props){
+        super(props);
+        this.developHeader = null;
+        this.productHeader = null;
+    }
+    
     componentDidMount(){
-        const developHeader = document.querySelector(".dev_header");
-        const productHeader = document.querySelector(".product_header");
-        const productTrigger = document.querySelector(".link_product");
-        const devTrigger = document.querySelector(".link_dev");
-        
+      
+        let productTrigger = document.querySelector(".link_product");
+        let devTrigger = document.querySelector(".link_dev");
+
         if (productTrigger){
             productTrigger.addEventListener("mouseover",()=>{
-                if(developHeader.classList.contains("fadeIn")){
-                    developHeader.classList.remove("fadeIn")
+                if(this.developHeader.classList.contains("fadeIn")){
+                    this.developHeader.classList.remove("fadeIn")
                 }
-                developHeader.classList.add("fadeOut"); 
+                this.developHeader.classList.add("fadeOut"); 
             });
             productTrigger.addEventListener("mouseout",()=>{
-                if(developHeader.classList.contains("fadeOut")){
-                    developHeader.classList.remove("fadeOut");
+                if(this.developHeader.classList.contains("fadeOut")){
+                    this.developHeader.classList.remove("fadeOut");
                 }
-                developHeader.classList.add("fadeIn"); 
+                this.developHeader.classList.add("fadeIn"); 
             });
         }
         if (devTrigger){
             devTrigger.addEventListener("mouseover",()=>{
-                if(productHeader.classList.contains("fadeIn")){
-                    productHeader.classList.remove("fadeIn")
+                if(this.productHeader.classList.contains("fadeIn")){
+                    this.productHeader.classList.remove("fadeIn")
                 }
-                productHeader.classList.add("fadeOut"); 
+                this.productHeader.classList.add("fadeOut"); 
             });
-            devTrigger.addEventListener("mouseout",()=>{
-                if(productHeader.classList.contains("fadeOut")){
-                    productHeader.classList.remove("fadeOut");
+           devTrigger.addEventListener("mouseout",()=>{
+                if(this.productHeader.classList.contains("fadeOut")){
+                    this.productHeader.classList.remove("fadeOut");
                 }
-                productHeader.classList.add("fadeIn"); 
+                this.productHeader.classList.add("fadeIn"); 
             });
         }    
     }
@@ -105,24 +117,26 @@ export default class Hero extends Component {
        if(this.props.main){
         MainHero =   
        
-        <>
-            <Link className="link_product" to="/product"><h1 className="product_header">{this.props.head_1}</h1></Link>
+        <HeroBase style={{maxWidth:"1300px"}}>
+            <AniLink  className="link_product" color="black" paintDrip to="/product"><h1 ref={h1 => this.productHeader = h1} className="product_header">{this.props.head_1}</h1></AniLink>
             
-            <Link  className="link_dev"to="/development"><h1 className="dev_header">{this.props.head_2}</h1></Link>
+            <AniLink  className="link_dev" color="black" paintDrip to="/development"><h1 ref={h1 => this.developHeader = h1} className="dev_header">{this.props.head_2}</h1></AniLink>
             
            
-            <img className="hero_img1" style={{
-            marginBottom: 0,
-            margin:`auto`,
-            marginTop:`0`,
-            minWidth:`100vw`,
-            zIndex:-1
-            }}alt={this.props.alt} src={this.props.src}/>
+            {/* <img className="hero_img1" style={{
+                marginBottom: 0,
+                margin:`auto`,
+                marginTop:`0`,
+                minWidth:`100vw`,
+                zIndex:-1
+                }}alt={this.props.alt} src={this.props.src} */}
+                <HeroImage/>
+            
         
-       </>
+       </HeroBase>
        } else {
          MainHero =  
-        <>
+        <HeroBase>
            <img className="hero_img1" style={{
             marginBottom: 0,
             margin:`auto`,
@@ -130,21 +144,18 @@ export default class Hero extends Component {
             minWidth:`100vw`,
             zIndex:-1
             }}alt={this.props.alt} src={this.props.src}/>  
-        </> 
+        </HeroBase> 
        }
 
-       
-
-
-
-
-   return(
-    <HeroBase>
-        {MainHero}
-    </HeroBase>
+   return (
+    <>
+    {MainHero}
+    </>
+        
+   );
   
     
-   );
+   
   }
 }
 

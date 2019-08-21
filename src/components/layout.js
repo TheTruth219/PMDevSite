@@ -8,15 +8,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 import MainNav from "./mainNav"
+import Contact from "./contact"
 import "./layout.css"
 
 
-const Layout = ({ data,children,main }) => {
+const Layout = ({ data,children,main,blog }) => {
  
   return (
     
     <>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <MainNav main={main} data={data}/>
       <div
         style={{
@@ -25,11 +25,14 @@ const Layout = ({ data,children,main }) => {
         }}
       >
         <main>{children}</main>
+       {!blog? <Contact/>: false}
         <footer style={{
           margin:`auto`,
+          padding:`18px`,
           textAlign:`center`,
           backgroundColor: `black`,
-          color: `white`
+          color: `white`,
+          
         }}>
           © {new Date().getFullYear()}, Stephen Powers
         </footer>
