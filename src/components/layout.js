@@ -12,7 +12,7 @@ import Contact from "./contact"
 import "./layout.css"
 
 
-const Layout = ({ data,children,main }) => {
+const Layout = ({ data,children,main,blog }) => {
  
   return (
     
@@ -25,12 +25,14 @@ const Layout = ({ data,children,main }) => {
         }}
       >
         <main>{children}</main>
-        <Contact/>
+       {!blog? <Contact/>: false}
         <footer style={{
           margin:`auto`,
+          padding:`18px`,
           textAlign:`center`,
           backgroundColor: `black`,
-          color: `white`
+          color: `white`,
+          
         }}>
           © {new Date().getFullYear()}, Stephen Powers
         </footer>

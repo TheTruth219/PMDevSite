@@ -1,13 +1,18 @@
 {
     "LandingPage":[
         {
-            "Navigation":["Home","About","Blog","Contact"]
-        },
-        {
+            "Navigation":["Home","About","Blog","Contact"],
             "Hero":[
                 {"title_1":"product"},
-                {"title_2":"</code>"}
-                ]
+                {"title_2":"<code/>"}
+                ],
+            "About": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus feugiat egestas. Aenean sed gravida nisi. Fusce iaculis porttitor dictum. Aliquam nec neque ligula. Nullam pulvinar, nisl porta vehicula faucibus, felis dui dignissim nulla, dapibus congue arcu mi in nisl. Proin et gravida neque. Fusce eu ultrices nulla, sit amet tincidunt neque. Quisque convallis nec lectus et faucibus. Sed mi mi, elementum ut molestie a, vestibulum vel quam. Curabitur sagittis nisi felis, a tristique orci molestie sit amet."
         }
+        
+            
+        
+        
+            
+        
     ]
 }

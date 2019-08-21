@@ -8,7 +8,8 @@ const ContactBase = styled.div`
   display:flex;
   flex-direction:column;
 
-  h3{
+
+  h2{
     text-align: center;
     padding:0 20px;
     margin-top: 20px;
@@ -30,7 +31,7 @@ export default function Contact () {
 
 return (
   <ContactBase>
-    <h3 id="contact">Interested in working together or just grabbing a cup of coffee?</h3>
+    <h2 id="contact">Interested in working together or just grabbing a cup of coffee?</h2>
     <a href="mailto:stephen@cloudpoweredtech.com?subject=We%20Should%20Talk%20Soon" role="button">Contact me</a>
   </ContactBase>
 )
