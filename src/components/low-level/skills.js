@@ -18,10 +18,10 @@ padding:30px 0;
  
 }
 
-h4{
+h3{
     text-align:center;
     margin-bottom:8px;
-    margin-top:4em;
+    margin-top:40px;
 }
 span{
   display:flex;
@@ -42,7 +42,7 @@ p{
             <span>
               {props.children}
             </span>
-            <h4>{header}</h4>
+            <h3>{header}</h3>
             <br/>
             <p>{copy}</p>
     </SkillsBase>

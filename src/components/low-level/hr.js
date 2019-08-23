@@ -6,13 +6,13 @@ const HrBase = styled.hr`
    align-self:center; 
   
   ${props =>
-    typeof(props.width) === "string" ? `width:${props.width}` : `width: auto`}
+    typeof(props.width) === "string" ? `width:${props.width}` : `width: 40px`}
 
   ${props =>
     typeof(props.height) === "string" ? `height:${props.height}` : `height: 2px`}
 
   ${props =>
-    typeof(props.color) === "string" ? `border-color:${props.color}` : false}
+    typeof(props.color) === "string" ? `border-color:${props.color}` : `border-color:grey`}
 
   ${props =>
     typeof(props.border) === "string" ? `border-width:${props.border}` : false}

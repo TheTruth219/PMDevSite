@@ -24,14 +24,15 @@ const Layout = ({ data,children,main,blog }) => {
           paddingTop: 0,
         }}
       >
-        <main>{children}</main>
+        <main >{children}</main>
        {!blog? <Contact/>: false}
         <footer style={{
           margin:`auto`,
           padding:`18px`,
           textAlign:`center`,
           backgroundColor: `black`,
-          color: `white`,
+          color: `white`
+         
           
         }}>
           © {new Date().getFullYear()}, Stephen Powers

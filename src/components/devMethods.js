@@ -3,8 +3,8 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import {FaMobile,FaCog,FaBoxes,FaChartBar} from "react-icons/fa";
 import { IconContext} from "react-icons";
-import Skills from "./skills"
-import Hr from "./hr"
+import Skills from "./low-level/skills"
+import Hr from "./low-level/hr"
 
 
 const MethodsBase = styled.section`

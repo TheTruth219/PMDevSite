@@ -9,7 +9,9 @@ import SEO from "../components/seo"
 const Development = () => (
   <Layout data={data.Development[0].Navigation}>
     <SEO title="Development" />
-    <Hero src="./static/4k-wallpaper-blur-close-up-2763927.jpg">
+    <Hero color="#E4E6B2" src="./static/FED2.png">
+      <h1 >Front-End Developer</h1>
+      <p>lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum </p>
     </Hero>
     <About data={data.Development[2].About}/>
     <Methods data={data.Development[3].Methods}/>

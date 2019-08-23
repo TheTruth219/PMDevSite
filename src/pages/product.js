@@ -5,7 +5,7 @@ import styled from "styled-components"
 import About from "../components/about"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import Methods from "../components/prodMethods"
 
 const PageBase = styled.div`
   a{
@@ -19,6 +19,7 @@ const ProductPage = () => (
     <PageBase>
       <Hero src={"./static/aerial-aerial-shot-background-1644794.jpg"||"https://via.placeholder.com/1200x360"}/>
       <About data={data.Product[1].About}/>
+      <Methods data={data.Product[2].Methods}/>
     </PageBase>
     
   </Layout>

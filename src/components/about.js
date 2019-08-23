@@ -1,12 +1,11 @@
 
 import React from "react"
 import styled from "styled-components"
-import Hr from "./hr"
+import Hr from "./low-level/hr"
 
 
 
 const AboutBase = styled.section`
-
 display:flex;
 flex-direction:column;
 background-color:dimgrey;
@@ -21,6 +20,7 @@ p{
     align-self:center;
     text-align:center;
     padding:20px;
+    font-family:'PT Sans', sans-serif;
 }
 
 `
