@@ -1,8 +1,19 @@
 {
-   "Product":[
-    {
-        "Navigation":["Home","About","Projects","Contact"]
-    }
-   ]
+    "Product":[
+        {
+            "Navigation":["Home","About","Projects","Blog","Contact"]
+        },
+        {
+            "About":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus feugiat egestas. Aenean sed gravida nisi. Fusce iaculis porttitor dictum. Aliquam nec neque ligula. Nullam pulvinar, nisl porta vehicula faucibus, felis dui dignissim nulla, dapibus congue arcu mi in nisl. Proin et gravida neque. Fusce eu ultrices nulla, sit amet tincidunt neque. Quisque convallis nec lectus et faucibus. Sed mi mi, elementum ut molestie a, vestibulum vel quam. Curabitur sagittis nisi felis, a tristique orci molestie sit amet."   
+        },
+        {
+            "Methods":[
+                ["Vision","Cross-device and platform experiences are now the norm. Mobile First isn't just an idea, it's an imperative for every project."],
+                ["Technical","It's critical people can understand and support your work. My aim is to provide clean code that is easy to interact with."],
+                ["Collaborative","Code should be written in a way that provides easy ways to add and change features without adding technical debt into the equation."],
+                ["Strategic","I work with different areas of the business so we can make informed decisions that bring value to customers."]
+            ]
+        }
+    ]
     
 }

@@ -1,19 +1,27 @@
 import React from "react"
 import Hero from "../components/Hero"
-import {Link} from "gatsby"
 import data from "../data/productHP.json"
-
-
+import styled from "styled-components"
+import About from "../components/about"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Methods from "../components/prodMethods"
 
-const Product = () => (
+const PageBase = styled.div`
+  a{
+    text-decoration:none;
+  }
+`
+
+const ProductPage = () => (
   <Layout data={data.Product[0].Navigation}>
     <SEO title="Product" />
-    <Hero src="https://via.placeholder.com/1200x360">
-    </Hero>
-    <Link to="/">Go back to the homepage</Link>
+    <PageBase>
+      <Hero src={"./static/aerial-aerial-shot-background-1644794.jpg"||"https://via.placeholder.com/1200x360"}/>
+      <About data={data.Product[1].About}/>
+      <Methods data={data.Product[2].Methods}/>
+    </PageBase>
+    
   </Layout>
 )
-
-export default Product;
+export default ProductPage;

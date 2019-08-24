@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -39,7 +40,7 @@ module.exports = {
         background_color: `black`,
         theme_color: `black`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/SP-favicon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
