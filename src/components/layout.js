@@ -7,8 +7,8 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import MainNav from "./mainNav"
 import Contact from "./contact"
+import MainNav from "./mainNav"
 import "./layout.css"
 
 
@@ -35,7 +35,7 @@ const Layout = ({ data,children,main,blog }) => {
          
           
         }}>
-          © {new Date().getFullYear()}, Stephen Powers
+          © {new Date().getFullYear()} All Rights Reserved.
         </footer>
       </div>
     </>

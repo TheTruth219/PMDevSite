@@ -1,11 +1,11 @@
 import React from "react"
-import Hero from "../components/Hero"
-import data from "../data/productHP.json"
+import Hero from "../../components/Hero"
+import data from "../../data/productHP.json"
 import styled from "styled-components"
-import About from "../components/about"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Methods from "../components/prodMethods"
+import About from "../../components/about"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import Methods from "../../components/prodMethods"
 
 const PageBase = styled.div`
   a{

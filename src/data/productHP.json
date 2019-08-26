@@ -8,10 +8,10 @@
         },
         {
             "Methods":[
-                ["Vision","Cross-device and platform experiences are now the norm. Mobile First isn't just an idea, it's an imperative for every project."],
+                ["Vision-driven","Cross-device and platform experiences are now the norm. Mobile First isn't just an idea, it's an imperative for every project."],
                 ["Technical","It's critical people can understand and support your work. My aim is to provide clean code that is easy to interact with."],
-                ["Collaborative","Code should be written in a way that provides easy ways to add and change features without adding technical debt into the equation."],
-                ["Strategic","I work with different areas of the business so we can make informed decisions that bring value to customers."]
+                ["User-focused","Code should be written in a way that provides easy ways to add and change features without adding technical debt into the equation."],
+                ["Data-informed","I work with different areas of the business so we can make informed decisions that bring value to customers."]
             ]
         }
     ]

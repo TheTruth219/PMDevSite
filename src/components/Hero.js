@@ -3,6 +3,8 @@ import React,{Component} from "react"
 import styled from "styled-components"
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import HeroImage from "./low-level/heroImage"
+import DevImage from "./low-level/devHero";
+import ProdImage from "./low-level/prodHero";
 // import TweenLite from "gsap"
 
 
@@ -182,11 +184,7 @@ export default class Hero extends Component {
        } else {
          MainHero =  
         <HeroBase style={{backgroundColor:this.props.color}}>
-           <img  style={{
-            marginBottom: 0,
-            margin:`auto`,
-            marginTop:`0`,
-            }}alt={this.props.alt} src={this.props.src}/> 
+           {this.props.Dev?<DevImage/>:<ProdImage/>}
             <div className="hero_children"style={{position:`absolute`,width:`29%`,left:`10%`}}>
                 {this.props.children}  
             </div> 
