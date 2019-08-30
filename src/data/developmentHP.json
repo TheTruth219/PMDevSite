@@ -23,6 +23,28 @@
             ]
         },
         {
+            "Value" : [
+                {"title":"My Skillset"},
+                {"subtitle":"My Tools"},
+                {"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus feugiat egestas. Aenean sed gravida nisi. Fusce iaculis porttitor dictum. Aliquam nec neque ligula. Nullam pulvinar, nisl porta vehicula faucibus, felis dui dignissim nulla, dapibus congue arcu mi in nisl."},
+                {
+                    "chartData":{
+                        "Javascript": { "React": 1, "Vue": 1, "Webpack": 1, "Grunt": 1,"NPM":1 },
+                        "Html": { "React": 1, "Vue": 1, "Pug": 1, "Mustache":1, "NPM":1 },
+                        "CSS": { "Sass": 1, "React": 1, "Vue": 1 },
+                        "Webpack": { "Javascript": 1, "React": 1, "Vue": 1 },
+                        "Jquery": { "Javascript": 3, "CSS": 1 },
+                        "Node": {"Javascript": 3, "NPM": 3, "Webpack": 2},
+                        "Sass": {"NPM":2, "Webpack":3, "Grunt":3},
+                        "JSON":{"NPM":2,"Webpack":2, "Grunt":2,"Javascript":1}
+                      }
+                },
+                {"chartColors":["#17242E", "#000000", "#333333", "#82853E", "#B9BF3C",
+                    "#E4E6B2", "#D7973A", "#B5975F"]}
+
+            ]
+        },
+        {
             "Projects" : [
                 {
                     "name":"PR Chat",
@@ -44,7 +66,7 @@
                     "name":"Nota Network",
                     "stack":"Node, React, Coin Desk API, Highcharts",
                     "link":"https://thetruth219.github.io/NOTANetwork-Dash/",
-                    "img":"../../img/nota_loan_request.png",
+                    "img":"./static/nota_loan_request.png",
                     "desc":"A prototype investor dashboard",
                     "copy":"I'm very interested in how crypto-currencies and blockchain technology are revolutionizing different industries, so I'm currently working with companies in this space.This would allow investors to offer loans via crypto or fiat currency to start-ups by-way of a private investment network."
                 },

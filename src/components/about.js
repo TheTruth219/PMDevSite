@@ -1,16 +1,15 @@
 
 import React from "react"
 import styled from "styled-components"
-import Hr from "./hr"
+import Hr from "./low-level/hr"
 
 
 
 const AboutBase = styled.section`
-
 display:flex;
 flex-direction:column;
 background-color:dimgrey;
-padding:30px 0;
+padding:70px 0 56px 0;
 
 h1{
     text-align:center;
@@ -21,6 +20,7 @@ p{
     align-self:center;
     text-align:center;
     padding:20px;
+    font-family:'PT Sans', sans-serif;
 }
 
 `
@@ -28,8 +28,8 @@ const About=({data})=>  {
 
     
    return(
-    <AboutBase>
-       <h1>About</h1>
+    <AboutBase id="about">
+       <h1 >About</h1>
        <Hr width="40px" color="grey"/>
        <p dangerouslySetInnerHTML={{ __html: data }}></p>
     </AboutBase>

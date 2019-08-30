@@ -7,8 +7,8 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import MainNav from "./mainNav"
 import Contact from "./contact"
+import MainNav from "./mainNav"
 import "./layout.css"
 
 
@@ -24,17 +24,18 @@ const Layout = ({ data,children,main,blog }) => {
           paddingTop: 0,
         }}
       >
-        <main>{children}</main>
+        <main >{children}</main>
        {!blog? <Contact/>: false}
         <footer style={{
           margin:`auto`,
           padding:`18px`,
           textAlign:`center`,
           backgroundColor: `black`,
-          color: `white`,
+          color: `white`
+         
           
         }}>
-          © {new Date().getFullYear()}, Stephen Powers
+          © {new Date().getFullYear()} All Rights Reserved.
         </footer>
       </div>
     </>
