@@ -16,11 +16,13 @@ const HrBase = styled.hr`
 
   ${props =>
     typeof(props.border) === "string" ? `border-width:${props.border}` : false}
+    ${props =>
+      props.grad? `background-image:${props.grad}`:false}
     
 `;
 
 const Hr = props => {
-  let { height, width, color, border } = props;
+  let { height, width, color, border, grad } = props;
 
   return (
     <HrBase
@@ -28,6 +30,7 @@ const Hr = props => {
       width={width}
       color={color}
       border={border}
+      grad={grad}
      
      />
 

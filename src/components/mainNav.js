@@ -12,18 +12,17 @@ const LinkBase = styled.li`
   margin-bottom:1em;
   position:relative;
 
-
+  
   a{
     text-decoration:none;
-    color: white;
-   
+    color:white;
     &:before, &:after{
       position: absolute;
       opacity: 0;
       width: 0%;
       height: 2px;
       content: '';
-      background: #FFF;
+      background: white;
       transition: all 0.5s;
     }
     &:before{
@@ -39,47 +38,73 @@ const LinkBase = styled.li`
       width: 100%;  
     }
   }
+  
+`
+const NavBarBase = styled.nav`
+  background-color:transparent;
+  position:fixed;
+  top:0;
+  z-index:100;
+  min-width:100vw;
+  transition: all 0.3s;
+  
+  .dark a{
+    color: #17242E;
+  }
+
 `
 export default class MainNav extends Component {
-  
+    constructor(props){
+      super(props);
+      this.navBar =null;
+      
+    }
 
   componentDidMount(){
     
 
-    // if(window){
-    //   try {
-    //     let path = window.location.pathname;
-    //     if (this.props.main) {
-    //       this.pageNavLinks = this.props.data.map( (header,index) => 
-    //       <LinkBase key={index}><AniLink swipe to={header !== "Home" && header !== "Blog"? path+"/#"+header.toLowerCase(): header ==="Home"? "/":"/"+header.toLowerCase()}>{header.toUpperCase()}</AniLink></LinkBase>)
-    //     } else {
-    //       this.pageNavLinks = this.props.data.map( (header,index) => 
-    //       <LinkBase key={index}><AniLink swipe to={header !== "Home" && header !== "Blog"? path+"/#"+header.toLowerCase(): header ==="Home"? "/":"/#"+header.toLowerCase()}>{header.toUpperCase()}</AniLink></LinkBase>)
-    //     }
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // }
-    
-
         this.path = window.location.pathname;
         
+        window.onscroll = function() {scrollFunction()};
+        let links = document.querySelectorAll(".links")
+
+        let scrollFunction = () => {
+          if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            this.navBar.style.backgroundColor = "#ffffff8a";
+            links.forEach(link=> {
+              link.classList.add("dark");
+            });
+            
+      
+          } else {
+            this.navBar.style.backgroundColor = "transparent";
+            links.forEach(link=> {
+              link.classList.remove("dark");
+            });
+           
+          }
+        }
     
   }
     
 render(){
   this.pageNavLinks = this.props.data.map( (header,index)=>{
     if(header !== "Home" && header !== "Blog"){
-      return <LinkBase key={index}><Link to={"/"+this.path+"/#"+header.toLowerCase()}>{header.toUpperCase()}</Link></LinkBase>
+      return <LinkBase className="links" key={index}><Link to={"/"+this.path+"/#"+header.toLowerCase()}>{header.toUpperCase()}</Link></LinkBase>
+    }else if(header ==="Home"){
+      return <LinkBase className="links" key={index}><AniLink swipe to="/">{header.toUpperCase()}</AniLink></LinkBase>
     }else{
-      return <LinkBase key={index}><AniLink swipe to={header ==="Home"? "/":"/"+header.toLowerCase()}>{header.toUpperCase()}</AniLink></LinkBase>
+      return <LinkBase className="links" key={index}><AniLink swipe to={"/"+header.toLowerCase()}>{" |  " + header.toUpperCase()}</AniLink></LinkBase>
+      
     }
   });
     return (
       
-      <nav style={{backgroundColor:"black", position:`fixed`,top:`0`,minWidth:`100vw`, zIndex:`100`}}>
-        <ul style={{display:"flex", listStyleType:"none",marginBottom:"0",maxWidth:"1200px"}}>{this.pageNavLinks?this.pageNavLinks:"Sorry No Nav"}</ul> 
-      </nav>
+      <NavBarBase ref={nav => this.navBar = nav}>
+        <ul style={{display:"flex", listStyleType:"none",marginBottom:"0",maxWidth:"1200px"}}>
+          {this.pageNavLinks}
+        </ul> 
+      </NavBarBase>
     )
   }
 };

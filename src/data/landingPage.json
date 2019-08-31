@@ -1,7 +1,7 @@
 {
     "LandingPage":[
         {
-            "Navigation":["Home","About","Blog","Contact"],
+            "Navigation":["Home","About","Contact","Blog"],
             "Hero":[
                 {"title_1":"product"},
                 {"title_2":"<code/>"}

@@ -1,7 +1,7 @@
 {
     "Product":[
         {
-            "Navigation":["Home","About","Projects","Blog","Contact"]
+            "Navigation":["Home","About","Projects","Contact","Blog"]
         },
         {
             "About":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus feugiat egestas. Aenean sed gravida nisi. Fusce iaculis porttitor dictum. Aliquam nec neque ligula. Nullam pulvinar, nisl porta vehicula faucibus, felis dui dignissim nulla, dapibus congue arcu mi in nisl. Proin et gravida neque. Fusce eu ultrices nulla, sit amet tincidunt neque. Quisque convallis nec lectus et faucibus. Sed mi mi, elementum ut molestie a, vestibulum vel quam. Curabitur sagittis nisi felis, a tristique orci molestie sit amet."   
@@ -21,18 +21,17 @@
                 {"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus feugiat egestas. Aenean sed gravida nisi. Fusce iaculis porttitor dictum. Aliquam nec neque ligula. Nullam pulvinar, nisl porta vehicula faucibus, felis dui dignissim nulla, dapibus congue arcu mi in nisl."},
                 {
                     "chartData":{
-                        "Javascript": { "React": 1, "Vue": 1, "Webpack": 1, "Grunt": 1,"NPM":1 },
-                        "Html": { "React": 1, "Vue": 1, "Pug": 1, "Mustache":1, "NPM":1 },
-                        "CSS": { "Sass": 1, "React": 1, "Vue": 1 },
-                        "Webpack": { "Javascript": 1, "React": 1, "Vue": 1 },
-                        "Jquery": { "Javascript": 3, "CSS": 1 },
-                        "Node": {"Javascript": 3, "NPM": 3, "Webpack": 2},
-                        "Sass": {"NPM":2, "Webpack":3, "Grunt":3},
-                        "JSON":{"NPM":2,"Webpack":2, "Grunt":2,"Javascript":1}
+                        "Leadership": { "OKR/Roadmaps": 1, "Requirements": 1, "Market Research": 1,"BL Grooming":1,"Strategy":1},
+                        "BL Grooming": { "Requirements": 1, "Strategy": 1, "Metrics": 1 },
+                        "Requirements": { "Strategy": 1, "BL Grooming": 1 },
+                        "Market Research": { "Strategy": 1, "Metrics": 1, "OKR/Roadmaps": 1 },
+                        "OKR/Roadmaps": { "Biz Dev": 3, "Market Research": 1 },
+                        "Strategy": {"Market Research": 3, "Leadership": 3, "Metrics": 2}
+                        
+                       
                       }
                 },
-                {"chartColors":["#17242E", "#000000", "#333333", "#82853E", "#B9BF3C",
-                    "#E4E6B2", "#D7973A", "#B5975F"]}
+                {"chartColors":["#01EEB8", "#28C4F0", "#3127AD", "#9D6CFE","#05D3DE"]}
 
             ]
         }

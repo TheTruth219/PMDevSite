@@ -11,7 +11,7 @@ import Values from "../../components/values";
 const Development = () => (
   <Layout data={data.Development[0].Navigation} >
     <SEO title="Development" />
-    <Hero Dev color="#E4E6B2" src="./static/FED2.png">
+    <Hero Dev color="#07ACDA" src="./static/FED2.png">
       <h1 >Front-End Developer</h1>
       <p>Cool dev quote goes here. </p>
     </Hero>
