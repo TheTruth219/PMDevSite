@@ -13,7 +13,10 @@ import "./layout.css"
 
 
 const Layout = ({ data,children,main,blog }) => {
- 
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+  }
   return (
     
     <>
@@ -30,7 +33,7 @@ const Layout = ({ data,children,main,blog }) => {
           margin:`auto`,
           padding:`18px`,
           textAlign:`center`,
-          backgroundColor: `black`,
+          backgroundColor: `#13163B`,
           color: `white`
          
           

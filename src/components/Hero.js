@@ -16,7 +16,7 @@ display:flex;
 position: relative;
 align-items:center;
 margin:auto;
-margin-top:40px;
+padding-top:40px;
 justify-content:center;
 
 
@@ -28,15 +28,15 @@ justify-content:center;
     } 
 .hero_img1 {
     opacity:0;
-    z-index:-2;
+    z-index:5;
 }
 .hero_img2 {
     opacity:0;
-    z-index:-4;
+    z-index:5;
 }
 .hero_base{
     opacity:1;
-    z-index:-3;
+    z-index:0;
 }
 a {
     width: 38.5%;
@@ -46,7 +46,8 @@ a {
     align-items: center;
     text-decoration: none;
     color: black;
-    position:absolute
+    position:absolute;
+    z-index:10;
     }
 .link_product{
     left:0;
@@ -169,7 +170,7 @@ export default class Hero extends Component {
        if(this.props.main){
         MainHero =   
        
-        <HeroBase style={{maxWidth:"1300px"}}>
+        <HeroBase style={{backgroundImage:this.props.grad}}>
             <AniLink  className="link_product" color="black" paintDrip to="/product"><h1 ref={h1 => this.productHeader = h1} className="product_header">{this.props.head_1}</h1></AniLink>
             
             <AniLink  className="link_dev" color="black" paintDrip to="/development"><h1 ref={h1 => this.developHeader = h1} className="dev_header">{this.props.head_2}</h1></AniLink>
@@ -183,7 +184,7 @@ export default class Hero extends Component {
        </HeroBase>
        } else {
          MainHero =  
-        <HeroBase style={{backgroundColor:this.props.color}}>
+        <HeroBase style={{backgroundColor:this.props.color, backgroundImage:this.props.grad}}>
            {this.props.Dev?<DevImage/>:<ProdImage/>}
             <div className="hero_children"style={{position:`absolute`,width:`29%`,left:`10%`}}>
                 {this.props.children}  

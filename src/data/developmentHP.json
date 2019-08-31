@@ -1,7 +1,7 @@
 {
     "Development": [
         {
-            "Navigation":["Home","About","Projects","Blog","Contact"]
+            "Navigation":["Home","About","Projects","Contact","Blog"]
         },
         {
             "Hero":[
@@ -29,18 +29,19 @@
                 {"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus feugiat egestas. Aenean sed gravida nisi. Fusce iaculis porttitor dictum. Aliquam nec neque ligula. Nullam pulvinar, nisl porta vehicula faucibus, felis dui dignissim nulla, dapibus congue arcu mi in nisl."},
                 {
                     "chartData":{
-                        "Javascript": { "React": 1, "Vue": 1, "Webpack": 1, "Grunt": 1,"NPM":1 },
-                        "Html": { "React": 1, "Vue": 1, "Pug": 1, "Mustache":1, "NPM":1 },
+                        "Javascript": { "React": 1, "Vue": 1, "Webpack": 1, "Grunt": 1,"NPM":1,"Pug":2,"Mustache":2 },
+                        "Html": { "React": 1, "Vue": 1, "Pug": 1, "Mustache":1, "NPM":1,"Grunt":2,"Express":2 },
                         "CSS": { "Sass": 1, "React": 1, "Vue": 1 },
                         "Webpack": { "Javascript": 1, "React": 1, "Vue": 1 },
                         "Jquery": { "Javascript": 3, "CSS": 1 },
                         "Node": {"Javascript": 3, "NPM": 3, "Webpack": 2},
                         "Sass": {"NPM":2, "Webpack":3, "Grunt":3},
-                        "JSON":{"NPM":2,"Webpack":2, "Grunt":2,"Javascript":1}
+                        "JSON":{"NPM":2,"Webpack":2, "Grunt":2,"Javascript":1},
+                        "Express":{"Node":2,"Javascript":2,"Webpack":2,"Pug":2,"Mustache":2},
+                        "SQL":{"JSON":1,"Node":2,"Express":2}
                       }
                 },
-                {"chartColors":["#17242E", "#000000", "#333333", "#82853E", "#B9BF3C",
-                    "#E4E6B2", "#D7973A", "#B5975F"]}
+                {"chartColors":["#01EEB8", "#28C4F0", "#3127AD", "#9D6CFE","#05D3DE"]}
 
             ]
         },

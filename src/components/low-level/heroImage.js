@@ -22,7 +22,7 @@ const ImageBase = styled.img`
     margin-bottom:0;
     margin-top:0;
   
-    z-index:-1;
+    z-index:6;
 ` 
 const HeroImage = () => {
   const data = useStaticQuery(graphql`

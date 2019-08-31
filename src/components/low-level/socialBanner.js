@@ -24,7 +24,7 @@ const SocialBanner = () =>  {
     
    return(
     <SocialBase>
-       <p> Here is the copy <a href="http://localhost:8000/#">LINK</a></p>
+       <p> Connect with me on <a href="http://localhost:8000/#">LinkedIn</a></p>
     </SocialBase>
   
     

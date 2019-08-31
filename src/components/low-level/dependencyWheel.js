@@ -7,19 +7,10 @@ import {HighchartsChart, XAxis, YAxis, DependencyWheelSeries, Tooltip,withHighch
 
 
 
-
-
-
-
-
-
-
   class DependencyWheel extends Component  {
         
       componentDidMount(){
-        
-        
-         
+             
           this.formattedData = Object.keys(this.props.data).reduce((arr, from) => {
             const weights = this.props.data[from];
             return arr.concat(Object.keys(weights).map(to => [from, to, weights[to]]));
@@ -29,22 +20,16 @@ import {HighchartsChart, XAxis, YAxis, DependencyWheelSeries, Tooltip,withHighch
               addDependencyWheelModule(Highcharts);
               this.DependencyChart = 
            
-              <HighchartsChart>
-                 
-                  
-                  <XAxis type="category" />
-          
+              <HighchartsChart>                
+                  <XAxis type="category" />     
                   <YAxis>
                       <DependencyWheelSeries name="Dependency Wheel demo series" colors={this.props.colors} data={this.formattedData} keys={['from', 'to', 'weight']} />
-                  </YAxis>
-          
+                  </YAxis>         
                   <Tooltip enabled={false}/>
               </HighchartsChart>
-      
         }
     }
       render(){
-   
     return (
         <>
              {this.DependencyChart}

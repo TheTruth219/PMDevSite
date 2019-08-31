@@ -8,7 +8,7 @@ import Hr from "./low-level/hr"
 const AboutBase = styled.section`
 display:flex;
 flex-direction:column;
-background-color:dimgrey;
+background-color:#F8F8F8;
 padding:70px 0 56px 0;
 
 h1{
@@ -30,7 +30,7 @@ const About=({data})=>  {
    return(
     <AboutBase id="about">
        <h1 >About</h1>
-       <Hr width="40px" color="grey"/>
+       <Hr height="4px"width="40px" grad="linear-gradient(45deg,#05D3DE,#28C4F0)"/>
        <p dangerouslySetInnerHTML={{ __html: data }}></p>
     </AboutBase>
   
