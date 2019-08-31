@@ -12,8 +12,8 @@ const Development = () => (
   <Layout data={data.Development[0].Navigation} >
     <SEO title="Development" />
     <Hero Dev color="#07ACDA" src="./static/FED2.png">
-      <h1 >Front-End Developer</h1>
-      <p>Cool dev quote goes here. </p>
+      <h1 >Developer</h1>
+      <p>I build cool things. </p>
     </Hero>
     <About data={data.Development[2].About}/>
     <Methods data={data.Development[3].Methods}/>

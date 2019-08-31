@@ -32,7 +32,43 @@
                       }
                 },
                 {"chartColors":["#01EEB8", "#28C4F0", "#3127AD", "#9D6CFE","#05D3DE"]}
-
+                
+            ]
+        },
+        {
+            "Projects" : [
+                {
+                    "name":"PR Chat",
+                    "stack":"Node, React, Express, Webpack, Auth0",
+                    "link":"https://prnetwork-chat.herokuapp.com",
+                    "img":"https://media.giphy.com/media/1ykhYp1xXgSM6zofZT/giphy.gif",
+                    "desc":"A Real-time Secure Chat Client",
+                    "copy":"I've always been enthused with the concept of collaboration and sharing ideas. This was a rough idea pitched to a client that centered around community engagement. All you do is sign in with any of the SSO(Single Sign-on) methods, and you can chat with anyone currently signed in"
+                },
+                {
+                    "name":"FlashCards",
+                    "stack":"Node, Pug/Jade, Express, Cookie Parser",
+                    "link":"https://flshcards.herokuapp.com",
+                    "img":"https://media.giphy.com/media/1jWCg8teSg1lxSvMnU/giphy.gif",
+                    "desc":"An app to help you study",
+                    "copy":"This basic app uses dynamic routing with logic, and cookies to generate a random card. It then allows you to flip the card to get the answer to the question asked. In providing a username, the app takes that information and stores it as a cookie and uses that cookie to apply conditional routing."
+                },
+                {
+                    "name":"Nota Network",
+                    "stack":"Node, React, Coin Desk API, Highcharts",
+                    "link":"https://thetruth219.github.io/NOTANetwork-Dash/",
+                    "img":"./static/nota_loan_request.png",
+                    "desc":"A prototype investor dashboard",
+                    "copy":"I'm very interested in how crypto-currencies and blockchain technology are revolutionizing different industries, so I'm currently working with companies in this space.This would allow investors to offer loans via crypto or fiat currency to start-ups by-way of a private investment network."
+                },
+                {
+                    "name":"Who's Home",
+                    "stack":"Node, React, Google Maps API",
+                    "link":"https://whos-home.herokuapp.com",
+                    "img":"https://images.ctfassets.net/1es3ne0caaid/2vD20XayMY4cQOQAyWIYyQ/7e40fd4debb4db6f9d7c83a54b9106f6/nextjs-geofencing-demo.png",
+                    "desc":"A real-time geo-fencing app",
+                    "copy":"This was just me experimenting with the Google Maps API, to see if I could replicate something similar to Find My Friends. Currently the app generates random demo personas based off a base location radius. I intend to make it user specific with Auth0 and use location tracking to bring it to life."
+                }
             ]
         }
     ]

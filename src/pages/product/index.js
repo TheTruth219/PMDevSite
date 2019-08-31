@@ -7,6 +7,7 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import Methods from "../../components/prodMethods"
 import Values from "../../components/values";
+import RecentWork from "../../components/recentWork";
 
 const PageBase = styled.div`
   a{
@@ -25,6 +26,7 @@ const ProductPage = () => (
       <About data={data.Product[1].About}/>
       <Methods data={data.Product[2].Methods}/>
       <Values data={data.Product[3].Value}/>
+      <RecentWork data= {data.Product[4].Projects}/>
     </PageBase>
     
   </Layout>

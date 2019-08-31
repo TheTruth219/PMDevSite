@@ -46,7 +46,7 @@ const NavBarBase = styled.nav`
   top:0;
   z-index:100;
   min-width:100vw;
-  transition: all 0.3s;
+  transition: all 0.5s;
   
   .dark a{
     color: #17242E;

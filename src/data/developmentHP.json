@@ -49,7 +49,7 @@
             "Projects" : [
                 {
                     "name":"PR Chat",
-                    "stack":"Node, React, Express, Webpack, Auth0",
+                    "stack":"Node, React, Express, Auth0",
                     "link":"https://prnetwork-chat.herokuapp.com",
                     "img":"https://media.giphy.com/media/1ykhYp1xXgSM6zofZT/giphy.gif",
                     "desc":"A Real-time Secure Chat Client",
@@ -57,7 +57,7 @@
                 },
                 {
                     "name":"FlashCards",
-                    "stack":"Node, Pug/Jade, Express, Cookie Parser",
+                    "stack":"Node, Pug, Express",
                     "link":"https://flshcards.herokuapp.com",
                     "img":"https://media.giphy.com/media/1jWCg8teSg1lxSvMnU/giphy.gif",
                     "desc":"An app to help you study",
@@ -65,7 +65,7 @@
                 },
                 {
                     "name":"Nota Network",
-                    "stack":"Node, React, Coin Desk API, Highcharts",
+                    "stack":"Node, Highcharts, Coinbase API",
                     "link":"https://thetruth219.github.io/NOTANetwork-Dash/",
                     "img":"./static/nota_loan_request.png",
                     "desc":"A prototype investor dashboard",

@@ -23,7 +23,8 @@ import {HighchartsChart, XAxis, YAxis, DependencyWheelSeries, Tooltip,withHighch
               <HighchartsChart>                
                   <XAxis type="category" />     
                   <YAxis>
-                      <DependencyWheelSeries name="Dependency Wheel demo series" colors={this.props.colors} data={this.formattedData} keys={['from', 'to', 'weight']} />
+                  
+                      <DependencyWheelSeries name="Dependency Wheel" colors={this.props.colors} data={this.formattedData} keys={['from', 'to', 'weight']} />
                   </YAxis>         
                   <Tooltip enabled={false}/>
               </HighchartsChart>

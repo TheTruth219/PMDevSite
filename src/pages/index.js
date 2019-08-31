@@ -10,7 +10,7 @@ const IndexPage = () => (
   <Layout data={data.LandingPage[0].Navigation}
   main={true}>
     <SEO title="Home" />
-    <Hero main={true}
+    <Hero main
           grad="linear-gradient(180deg,#3127AD,#28C4F0)" 
           head_1={data.LandingPage[0].Hero[0].title_1} 
           head_2={data.LandingPage[0].Hero[1].title_2} 

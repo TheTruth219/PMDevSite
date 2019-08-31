@@ -16,27 +16,42 @@ display:flex;
 position: relative;
 align-items:center;
 margin:auto;
-padding-top:40px;
+padding-top:50px;
 justify-content:center;
 
+.product_link:hover{
+    transform:scale(1.1);
+    transition: all .3s;
+}
 
+.develop_link:hover {
+    transform:scale(1.1);
+    transition: all .3s;
+}
 .hero_img1,.hero_img2,.hero_base{
     margin:auto; 
     position:absolute;
     bottom:0;
-    min-width:80vw;
+    min-width:60vw;
     } 
 .hero_img1 {
     opacity:0;
     z-index:5;
+    transition: all .4 s
 }
 .hero_img2 {
     opacity:0;
     z-index:5;
+    transition: all .4 s
 }
 .hero_base{
     opacity:1;
     z-index:0;
+    transition: all .4 s
+}
+h1{
+    color:#FFFFFF;
+    transition:all .4s
 }
 a {
     width: 38.5%;
@@ -48,6 +63,7 @@ a {
     color: black;
     position:absolute;
     z-index:10;
+    align-self: center;
     }
 .link_product{
     left:0;
@@ -171,16 +187,20 @@ export default class Hero extends Component {
         MainHero =   
        
         <HeroBase style={{backgroundImage:this.props.grad}}>
-            <AniLink  className="link_product" color="black" paintDrip to="/product"><h1 ref={h1 => this.productHeader = h1} className="product_header">{this.props.head_1}</h1></AniLink>
+            <div style={{maxWidth: `1300px`,display: `flex`,position: `relative`,
+    justifyContent: `center`}}>
+                <AniLink  className="link_product" color="black" paintDrip to="/product"><h1 className="product_link"  ref={h1 => this.productHeader = h1} >{this.props.head_1}</h1></AniLink>
+                
+                <AniLink  className="link_dev" color="black" paintDrip to="/development"><h1 className="develop_link" ref={h1 => this.developHeader = h1} >{this.props.head_2}</h1></AniLink>
             
-            <AniLink  className="link_dev" color="black" paintDrip to="/development"><h1 ref={h1 => this.developHeader = h1} className="dev_header">{this.props.head_2}</h1></AniLink>
+            
 
                 <HeroImage/>
                 <img ref={img => this.productAnimate =img }className="hero_img1" alt={this.props.alt} src="./static/ProdFull.png"/>
                 <img ref={img => this.devAnimate =img }className="hero_img2" alt={this.props.alt} src="./static/DevFull.png"/> 
                 <img ref={img => this.animationBase =img }className="hero_base" alt={this.props.alt} src="./static/ProdDevFaded.png"/> 
             
-        
+            </div>
        </HeroBase>
        } else {
          MainHero =  
