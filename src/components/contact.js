@@ -27,7 +27,7 @@ const ContactBase = styled.div`
     margin-top: 20px;
     color:white;
   }
-  a{
+  .contact_button{
     text-decoration: none;
     color: #05D3DE;
     background-color: #13163B;
@@ -48,6 +48,7 @@ const ContactBase = styled.div`
   }
 
 `
+
 export default function Contact () {
   
   
@@ -56,12 +57,12 @@ return (
   <ContactBase id="contact">
     <h2 id="contact">Interested in working together or just grabbing a cup of coffee?</h2>
     <div className="wrapper">
-      <a href="mailto:stephen@cloudpoweredtech.com?subject=We%20Should%20Talk%20Soon" role="button">Contact me</a>
+      <a className="contact_button"href="mailto:stephen@cloudpoweredtech.com?subject=We%20Should%20Talk%20Soon" role="button">Contact me</a>
     </div>
     
     <IconContext.Provider value={{ style: { verticalAlign: 'middle', margin:'20px' }, color: "white", size:"2em" }}>
       <div>
-        <span><FaGithubAlt/><FaLinkedinIn/></span>
+        <span><a href="https://github.com/TheTruth219?tab=repositories" target="blank"><FaGithubAlt/></a><a href="https://www.linkedin.com/in/stephen-powerscpt/" target="blank"><FaLinkedinIn/></a></span>
       </div>
     </IconContext.Provider>
     

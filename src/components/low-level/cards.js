@@ -35,6 +35,7 @@ const Card = ({data}) => {
     let stack = data.stack.split(",")
     let finalStack = stack.map((word,index) =>{
       switch(word.trim()){
+          /* Take the incoming data and look for instances of "Node" and "React". If found, replace the words with the corresponding icons.*/
           case "Node":
               return <FaNode color="6cc24a" size="2em" key={index}/>
               
@@ -47,14 +48,16 @@ const Card = ({data}) => {
     })
     return (
         <CardBase >
-            <a target="blank" href={data.link}>
+            
             <IconContext.Provider value={{ style: { verticalAlign: 'middle', margin:'5px'} }}>
                 <h3>{data.name}</h3> 
+                <a target="blank" href={data.link}>
                 <img style={{alignSelf:`center`}}width="288px" height="180px"alt="card" src={data.img}/>
+                </a>
                 <h4>{data.desc}</h4>
                 <p>{finalStack}</p>
             </IconContext.Provider>
-            </a>
+            
         </CardBase>
     )
 }

@@ -32,7 +32,6 @@ justify-content:center;
     margin:auto; 
     position:absolute;
     bottom:0;
-    min-width:60vw;
     } 
 .hero_img1 {
     opacity:0;
@@ -51,7 +50,8 @@ justify-content:center;
 }
 h1{
     color:#FFFFFF;
-    transition:all .4s
+    transition:all .4s;
+    margin-bottom:0;
 }
 a {
     width: 38.5%;
@@ -134,13 +134,14 @@ export default class Hero extends Component {
             productTrigger.addEventListener("mouseover",()=>{
                 if(this.developHeader.classList.contains("fadeIn")){
                     this.developHeader.classList.remove("fadeIn"); 
-                    
                     this.productAnimate.classList.remove("fadeOut");
+                }else{
+                    this.animationBase.classList.remove("fadeIn");
+                    this.animationBase.classList.add("fadeOut");
+                    this.developHeader.classList.add("fadeOut");
+                    this.productAnimate.classList.add("fadeIn")
                 }
-                this.animationBase.classList.remove("fadeIn");
-                this.animationBase.classList.add("fadeOut");
-                this.developHeader.classList.add("fadeOut");
-                this.productAnimate.classList.add("fadeIn")
+                
             });
             productTrigger.addEventListener("mouseout",()=>{
                 if(this.developHeader.classList.contains("fadeOut")){
@@ -148,31 +149,36 @@ export default class Hero extends Component {
                     this.animationBase.classList.remove("fadeOut");
                     this.productAnimate.classList.remove("fadeIn");
 
+                }else{
+                    this.developHeader.classList.add("fadeIn"); 
                 }
                 
-                this.developHeader.classList.add("fadeIn"); 
+                
  
             });
         }
         if (devTrigger){
             devTrigger.addEventListener("mouseover",()=>{
                 if(this.productHeader.classList.contains("fadeIn")){
-                    this.productHeader.classList.remove("fadeIn");
-                    
+                    this.productHeader.classList.remove("fadeIn");                 
                     this.devAnimate.classList.remove("fadeOut");
+                }else{
+                    this.animationBase.classList.remove("fadeIn");
+                    this.animationBase.classList.add("fadeOut");
+                    this.productHeader.classList.add("fadeOut"); 
+                    this.devAnimate.classList.add("fadeIn")
                 }
-                this.animationBase.classList.remove("fadeIn");
-                this.animationBase.classList.add("fadeOut");
-                this.productHeader.classList.add("fadeOut"); 
-                this.devAnimate.classList.add("fadeIn")
+                
             });
            devTrigger.addEventListener("mouseout",()=>{
                 if(this.productHeader.classList.contains("fadeOut")){
                     this.productHeader.classList.remove("fadeOut");
                     this.animationBase.classList.remove("fadeOut");
                     this.devAnimate.classList.remove("fadeIn");
+                }else{
+                    this.productHeader.classList.add("fadeIn");
                 }
-                this.productHeader.classList.add("fadeIn");
+                
 
             });
         }    
@@ -196,9 +202,9 @@ export default class Hero extends Component {
             
 
                 <HeroImage/>
-                <img ref={img => this.productAnimate =img }className="hero_img1" alt={this.props.alt} src="./static/ProdFull.png"/>
-                <img ref={img => this.devAnimate =img }className="hero_img2" alt={this.props.alt} src="./static/DevFull.png"/> 
-                <img ref={img => this.animationBase =img }className="hero_base" alt={this.props.alt} src="./static/ProdDevFaded.png"/> 
+                <img ref={img => this.productAnimate =img }className="hero_img1" alt={this.props.alt} src="./static/Prod_Graphic.png"/>
+                <img ref={img => this.devAnimate =img }className="hero_img2" alt={this.props.alt} src="./static/Dev_Graphic.png"/> 
+                <img ref={img => this.animationBase =img }className="hero_base" alt={this.props.alt} src="./static/MainGraphic.png"/> 
             
             </div>
        </HeroBase>
@@ -207,7 +213,7 @@ export default class Hero extends Component {
         <HeroBase style={{backgroundColor:this.props.color, backgroundImage:this.props.grad}}>
            {this.props.Dev?<DevImage/>:<ProdImage/>}
             <div className="hero_children"style={{position:`absolute`,width:`29%`,left:`10%`}}>
-                {this.props.children}  
+              {this.props.children} 
             </div> 
             
         </HeroBase> 

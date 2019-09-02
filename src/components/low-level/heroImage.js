@@ -16,15 +16,16 @@ import styled from "styled-components"
  */
 
 const ImageBase = styled.img`
-
-  
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
     margin:auto;
     margin-bottom:0;
     margin-top:0;
-  
     z-index:6;
 ` 
 const HeroImage = () => {
+
+  
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "images/SP-avi.png" }) {
@@ -37,7 +38,7 @@ const HeroImage = () => {
     }
   `)
   return(
-    <ImageBase src={data.placeholderImage.childImageSharp.fluid.src} />
+    <ImageBase  src={data.placeholderImage.childImageSharp.fluid.src} />
   ) 
 }
 

@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Contact from "./contact"
-import MainNav from "./mainNav"
+import Nav from "./Nav"
 import "./layout.css"
 
 
@@ -20,7 +20,7 @@ const Layout = ({ data,children,main,blog }) => {
   return (
     
     <>
-      <MainNav main={main} data={data}/>
+      <Nav main={main} data={data}/>
       <div
         style={{
           margin: `auto`,
