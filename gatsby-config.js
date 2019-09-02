@@ -5,6 +5,7 @@ module.exports = {
     author: `Stephen Powers`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-transition-link`,
     {
