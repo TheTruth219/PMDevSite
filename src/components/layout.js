@@ -8,16 +8,19 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Contact from "./contact"
-import MainNav from "./mainNav"
+import Nav from "./Nav"
 import "./layout.css"
 
 
 const Layout = ({ data,children,main,blog }) => {
- 
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+  }
   return (
     
     <>
-      <MainNav main={main} data={data}/>
+      <Nav main={main} data={data}/>
       <div
         style={{
           margin: `auto`,
@@ -30,7 +33,7 @@ const Layout = ({ data,children,main,blog }) => {
           margin:`auto`,
           padding:`18px`,
           textAlign:`center`,
-          backgroundColor: `black`,
+          backgroundColor: `#13163B`,
           color: `white`
          
           

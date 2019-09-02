@@ -16,8 +16,8 @@ import styled from "styled-components"
  */
 
 const ImageBase = styled.img`
-
-  
+    -webkit-touch-callout: none;  
+    -webkit-user-drag: none;
     margin:auto;
     margin-bottom:0;
     margin-top:0;
@@ -37,7 +37,7 @@ const ProdImage = () => {
     }
   `)
   return(
-    <ImageBase src={data.placeholderImage.childImageSharp.fluid.src} />
+    <ImageBase oncopy="return false;" oncut="return false;" oncontextmenu="return false;" src={data.placeholderImage.childImageSharp.fluid.src} />
   ) 
 }
 

@@ -17,7 +17,7 @@ import styled from "styled-components"
 
 const ImageBase = styled.img`
 
-  
+    -webkit-user-drag: none;
     margin:auto;
     margin-bottom:0;
     margin-top:0;
@@ -37,7 +37,7 @@ const DevImage = () => {
     }
   `)
   return(
-    <ImageBase src={data.placeholderImage.childImageSharp.fluid.src} />
+    <ImageBase oncopy={false} oncut= {false} oncontextmenu="return false;" src={data.placeholderImage.childImageSharp.fluid.src} />
   ) 
 }
 

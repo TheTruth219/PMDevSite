@@ -7,6 +7,7 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import Methods from "../../components/prodMethods"
 import Values from "../../components/values";
+import RecentWork from "../../components/recentWork";
 
 const PageBase = styled.div`
   a{
@@ -18,13 +19,14 @@ const ProductPage = () => (
   <Layout data={data.Product[0].Navigation}>
     <SEO title="Product" />
     <PageBase>
-      <Hero color="#D7973A"src={"./static/ProdHero2.png"}>
+      <Hero color="#4955C4"src={"./static/ProdHero2.png"}>
         <h1>Product Manager</h1>
         <p>"Cool product quote here!"- Steve Jobs</p>
       </Hero>
       <About data={data.Product[1].About}/>
       <Methods data={data.Product[2].Methods}/>
       <Values data={data.Product[3].Value}/>
+      <RecentWork data= {data.Product[4].Projects}/>
     </PageBase>
     
   </Layout>
