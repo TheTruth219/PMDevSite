@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-
-
 const SocialBase = styled.div`
 display:flex;
 min-width:100vw;
@@ -16,15 +14,12 @@ p{
         font-weight:bold;
     }
 }
-
-
 `
 const SocialBanner = () =>  {
 
-    
    return(
     <SocialBase>
-       <p> Connect with me on <a href="http://localhost:8000/#">LinkedIn</a></p>
+       <p> Connect with me on <a href="https://www.linkedin.com/in/stephen-powerscpt/" target="blank">LinkedIn</a></p>
     </SocialBase>
   
     

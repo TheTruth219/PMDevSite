@@ -19,39 +19,41 @@ margin:auto;
 padding-top:50px;
 justify-content:center;
 
-.product_link:hover{
+.product_link:hover,.develop_link:hover{
     transform:scale(1.1);
-    transition: all .3s;
+    transition: all .4s;
 }
 
-.develop_link:hover {
-    transform:scale(1.1);
-    transition: all .3s;
-}
 .hero_img1,.hero_img2,.hero_base{
     margin:auto; 
     position:absolute;
     bottom:0;
     } 
-.hero_img1 {
+.hero_img1,.hero_img2 {
     opacity:0;
     z-index:5;
-    transition: all .4 s
+    transition: opacity .4s;
 }
-.hero_img2 {
-    opacity:0;
-    z-index:5;
-    transition: all .4 s
-}
+ 
 .hero_base{
     opacity:1;
     z-index:0;
-    transition: all .4 s
+    transition: opacity .4s;
 }
 h1{
     color:#FFFFFF;
-    transition:all .4s;
     margin-bottom:0;
+    transition:transform .4s, opacity 1.5s;
+
+}
+@media screen and (max-width:700px){
+    .product_link,.develop_link{
+        font-size: 7vw;
+        border: solid 3px white;
+        padding: 10px;
+        border-radius:9px;
+
+    }
 }
 a {
     width: 38.5%;
@@ -74,36 +76,18 @@ a {
    
 }
 .fadeOut{
-    animation-name: fadeOut;
-    animation-duration: 1500ms;
-    animation-fill-mode: forwards;
-    animation-delay: .3s;
-    animation-timing-function: ease-in-out
+    opacity:0;
+    transition: all 2s
     
 }
-@keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
 
   .fadeIn{
-    animation-name: fadeIn;
-    animation-duration: 1500ms;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out
+    opacity:1;
+    transition: all 2s
 }
-@keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+
+
+
 @media screen and (max-width: 610px){
     .hero_children{
         display:none;
@@ -147,8 +131,9 @@ export default class Hero extends Component {
                 if(this.developHeader.classList.contains("fadeOut")){
                     this.developHeader.classList.remove("fadeOut"); 
                     this.animationBase.classList.remove("fadeOut");
+                    this.animationBase.classList.add("fadeIn");
                     this.productAnimate.classList.remove("fadeIn");
-
+                    this.productAnimate.classList.add("fadeOut")
                 }else{
                     this.developHeader.classList.add("fadeIn"); 
                 }
@@ -174,7 +159,10 @@ export default class Hero extends Component {
                 if(this.productHeader.classList.contains("fadeOut")){
                     this.productHeader.classList.remove("fadeOut");
                     this.animationBase.classList.remove("fadeOut");
+                    this.animationBase.classList.add("fadeIn");
                     this.devAnimate.classList.remove("fadeIn");
+                    this.devAnimate.classList.add("fadeOut")
+
                 }else{
                     this.productHeader.classList.add("fadeIn");
                 }

@@ -8,12 +8,16 @@ import { IconContext} from "react-icons";
 const CardBase = styled.div`
 
 border:1px solid #d3d3d330;
-border-radius: 9px;
+border-radius: 6px;
 background-color: white;
 box-shadow:rgb(216, 216, 216) 0px 7px 16px 0px;
 padding:35px;
 margin:20px;
 
+img{
+    border: solid #8080803b 1px;
+    border-radius: 5px;
+}
 a{
  text-decoration:none;
  color: black;

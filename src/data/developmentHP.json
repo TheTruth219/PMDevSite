@@ -48,6 +48,14 @@
         {
             "Projects" : [
                 {
+                    "name":"Site Check API & CLI",
+                    "stack":"Node",
+                    "link":"https://github.com/TheTruth219/NodeApi",
+                    "img":"https://media.giphy.com/media/hpM1C0u2H7eH8W9zYY/giphy.gif",
+                    "desc":"Pure Node API",
+                    "copy":"I've always been enthused with the concept of collaboration and sharing ideas. This was a rough idea pitched to a client that centered around community engagement. All you do is sign in with any of the SSO(Single Sign-on) methods, and you can chat with anyone currently signed in"
+                },
+                {
                     "name":"PR Chat",
                     "stack":"Node, React, Express, Auth0",
                     "link":"https://prnetwork-chat.herokuapp.com",
