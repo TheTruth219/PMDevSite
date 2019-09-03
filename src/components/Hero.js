@@ -190,9 +190,9 @@ export default class Hero extends Component {
             
 
                 <HeroImage/>
-                <img ref={img => this.productAnimate =img }className="hero_img1" alt={this.props.alt} src="./static/Prod_Graphic.png"/>
-                <img ref={img => this.devAnimate =img }className="hero_img2" alt={this.props.alt} src="./static/Dev_Graphic.png"/> 
-                <img ref={img => this.animationBase =img }className="hero_base" alt={this.props.alt} src="./static/MainGraphic.png"/> 
+                <img ref={img => this.productAnimate =img }className="hero_img1" alt={this.props.alt} src="https://lh3.googleusercontent.com/-Ukux-GeLJDE/XW2i6mlFNQI/AAAAAAAAEP0/5jRBXMyk5qE2oDy7HSKP7FVxRhupTNbDACK8BGAs/s0/Prod_Graphic.png"/>
+                <img ref={img => this.devAnimate =img }className="hero_img2" alt={this.props.alt} src="https://lh3.googleusercontent.com/-pgsxv2lXgDg/XW2jQRfpyaI/AAAAAAAAEQM/l-H4lHH79f4jk66rAAA7eqpBvztt23UkwCK8BGAs/s0/Dev_Graphic.png"/> 
+                <img ref={img => this.animationBase =img }className="hero_base" alt={this.props.alt} src="https://lh3.googleusercontent.com/-kzLq4pcQx1k/XW2jUvX4-YI/AAAAAAAAEQY/bn0xTtoXYz0ztrgUdqsarYjnw2kZQS6iQCK8BGAs/s0/MainGraphic.png"/> 
             
             </div>
        </HeroBase>
