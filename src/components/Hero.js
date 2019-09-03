@@ -199,7 +199,7 @@ export default class Hero extends Component {
         MainHero =   
        
         <HeroBase style={{backgroundImage:this.props.grad}}>
-            <div style={{maxWidth: `1300px`,display: `flex`,position: `relative`,
+            <div style={{maxWidth: `1300px`,display: `flex`,flexDirection:`column`,position: `relative`,
     justifyContent: `center`}}>
                 <AniLink  className="link_product" color="black" paintDrip to="/product"><h1 className="product_link"  ref={h1 => this.productHeader = h1} >{this.props.head_1}</h1></AniLink>
                 
