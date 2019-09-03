@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-import {FaNode,FaReact} from "react-icons/fa"
+import {FaNode,FaReact,FaSass,FaSalesforce,FaGrunt} from "react-icons/fa"
 import { IconContext} from "react-icons";
 
 
@@ -13,6 +13,12 @@ background-color: white;
 box-shadow:rgb(216, 216, 216) 0px 7px 16px 0px;
 padding:35px;
 margin:20px;
+min-height:448px;
+transition:transform 0.3s;
+
+ &:hover{
+     transform:scale(1.05);
+ }
 
 img{
     border: solid #8080803b 1px;
@@ -45,6 +51,15 @@ const Card = ({data}) => {
               
           case "React":
               return <FaReact color="00d8ff" size="1.5em"  key={index}/>
+              
+          case "Sass":
+              return <FaSass color="#bf4080" size="1.5em"  key={index}/>
+
+          case "Salesforce":
+              return <FaSalesforce color="#1798c1" size="1.5em"  key={index}/>
+
+          case "Grunt":
+              return <FaGrunt color="#fba919" size="1.5em"  key={index}/>
 
           default :
           return index === stack.length - 1?<span key={index}>{word}</span>:<span key={index}>{word},</span>

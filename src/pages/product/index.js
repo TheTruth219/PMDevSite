@@ -21,7 +21,7 @@ const ProductPage = () => (
     <PageBase>
       <Hero color="#4955C4"src={"./static/ProdHero2.png"}>
         <h1>Product Manager</h1>
-        <p>"Cool product quote here!"- Steve Jobs</p>
+        <p><q>Be stubborn on vision but flexible on details.</q><br/>- Jeff Bezos</p>
       </Hero>
       <About data={data.Product[1].About}/>
       <Methods data={data.Product[2].Methods}/>
