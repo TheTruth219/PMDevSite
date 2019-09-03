@@ -26,10 +26,20 @@ const RecentWork = ({data}) => {
         arrows:true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 2,
         lazyLoad: 'progressive',
-        responsive:[{
+        responsive:[
+            {
+                breakpoint: 1495,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 2,
+                  infinite: true,
+                  dots: true
+                }
+            },
+            {
             breakpoint: 1064,
             settings: {
               slidesToShow: 2,
@@ -39,13 +49,13 @@ const RecentWork = ({data}) => {
             }
         },
         {
-                breakpoint: 709,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  infinite: true,
-                  dots: true
-                }
+            breakpoint: 709,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
 
         }]
        

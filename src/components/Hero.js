@@ -98,11 +98,9 @@ p{
         h1{
             font-size:6vw;
         }
-        p{
-            font-size:2vw;
-        }
+       
         q{
-            font-size:2vw;
+            font-size:2.4vw;
         }
     }
 }
@@ -217,11 +215,12 @@ export default class Hero extends Component {
        } else {
          MainHero =  
         <HeroBase style={{backgroundColor:this.props.color, backgroundImage:this.props.grad}}>
-           {this.props.Dev?<DevImage/>:<ProdImage/>}
-            <div className="hero_children"style={{position:`absolute`,width:`29%`,left:`10%`}}>
+            <div style={{position:`relative`,display:`flex`}}>
+             {this.props.Dev?<DevImage/>:<ProdImage/>}
+             <div className="hero_children"style={{position:`absolute`,marginLeft:`3em`,alignSelf:`center`,width:`34%`,left:`-30px`}}>
               {this.props.children} 
-            </div> 
-            
+             </div> 
+            </div>
         </HeroBase> 
        }
 
