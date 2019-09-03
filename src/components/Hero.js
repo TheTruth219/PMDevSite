@@ -71,6 +71,11 @@ a {
     left:0;
 
 }
+p{
+    padding-right: 50px;
+    margin-right: 50px;
+    color:white;
+}
 .link_dev {
     right: 0; 
    
@@ -88,9 +93,22 @@ a {
 
 
 
-@media screen and (max-width: 610px){
+@media screen and (max-width: 700px){
     .hero_children{
-        display:none;
+        h1{
+            font-size:6vw;
+        }
+        p{
+            font-size:2vw;
+        }
+        q{
+            font-size:2vw;
+        }
+    }
+}
+@media screen and (max-width: 567px){
+    .hero_children{
+       display:none;
     }
 }
 

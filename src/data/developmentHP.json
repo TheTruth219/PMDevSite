@@ -12,7 +12,7 @@
                 ]
         },
         {
-            "About":"I'm a <strong> Front-End Web Developer </strong> based out of <strong> Phoenix, AZ </strong>, with a strong background in marketing, business development, and project management. This allows me to understand business and organizational needs from a unique perspective and makes it a somewhat <strong>seamless </strong> process to work with UX/UI Design Teams. I pride myself on being able to effectively address challenges in clear and concise language for people in the organization that are less technically inclined. I also wake up every day and make an effort to learn something new. I'm comfortable with not knowing everything, but I'm also confident in my resourcefulness. Sometimes half the battle is choosing the <strong>RIGHT</strong>   battle to have."
+            "About":"I'm a <strong> Lead Front-End Developer </strong> based out of <strong> Phoenix, AZ </strong>, with backend and leadership experience. This allows me to understand business and organizational needs from a unique perspective and makes it a somewhat <strong>seamless </strong> process to work with Product Design teams. I pride myself on being able to effectively communicate technical challenges to diverse groups and stakeholders. I wake up every day and make an effort to learn something new and I'm comfortable with not knowing everything. I'm also confident in my resourcefulness, and I believe half the battle is choosing the <strong>right</strong> battle."
         },
         {
             "Methods":[
@@ -26,7 +26,7 @@
             "Value" : [
                 {"title":"My Skillset"},
                 {"subtitle":"My Tools"},
-                {"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus feugiat egestas. Aenean sed gravida nisi. Fusce iaculis porttitor dictum. Aliquam nec neque ligula. Nullam pulvinar, nisl porta vehicula faucibus, felis dui dignissim nulla, dapibus congue arcu mi in nisl."},
+                {"copy":"One of the most complicated things to explain is how one language, framework, or build tool co-relates with another. It's important to me to be able to communicate how the tools I use and choose lean upon one another to and are interconnected either directly or indirectly. This chart is a pretty good representation of what I have used predominately and how those relate to one another."},
                 {
                     "chartData":{
                         "Javascript": { "React": 1, "Vue": 1, "Webpack": 1, "Grunt": 1,"NPM":1,"Pug":2,"Mustache":2 },
@@ -48,6 +48,14 @@
         {
             "Projects" : [
                 {
+                    "name":"PetSmart.com & .ca",
+                    "stack":"React,Sass,Salesforce,Grunt",
+                    "link":"https://www.petsmart.com",
+                    "img":"https://media.giphy.com/media/VHZ0uQM4yb1iCwT9JB/giphy.gif",
+                    "desc":"Award Winning E-comm",
+                    "copy":"I've always been enthused with the concept of collaboration and sharing ideas. This was a rough idea pitched to a client that centered around community engagement. All you do is sign in with any of the SSO(Single Sign-on) methods, and you can chat with anyone currently signed in"
+                },
+                {
                     "name":"Site Check API & CLI",
                     "stack":"Node",
                     "link":"https://github.com/TheTruth219/NodeApi",
@@ -65,18 +73,18 @@
                 },
                 {
                     "name":"FlashCards",
-                    "stack":"Node, Pug, Express",
+                    "stack":"Node, Sass,  Pug, Express",
                     "link":"https://flshcards.herokuapp.com",
                     "img":"https://media.giphy.com/media/1jWCg8teSg1lxSvMnU/giphy.gif",
-                    "desc":"An app to help you study",
+                    "desc":"An App to Help You Study",
                     "copy":"This basic app uses dynamic routing with logic, and cookies to generate a random card. It then allows you to flip the card to get the answer to the question asked. In providing a username, the app takes that information and stores it as a cookie and uses that cookie to apply conditional routing."
                 },
                 {
                     "name":"Nota Network",
                     "stack":"Node, Highcharts, Coinbase API",
                     "link":"https://thetruth219.github.io/NOTANetwork-Dash/",
-                    "img":"./static/nota_loan_request.png",
-                    "desc":"A prototype investor dashboard",
+                    "img":"https://lh3.googleusercontent.com/-GzHwpMkff_s/XW27tLKa00I/AAAAAAAAERc/JVfjoVXQYKYnPJSbNTILuikY6MMKjRvrwCK8BGAs/s0/2019-09-02.png",
+                    "desc":"A Prototype Investor Dashboard",
                     "copy":"I'm very interested in how crypto-currencies and blockchain technology are revolutionizing different industries, so I'm currently working with companies in this space.This would allow investors to offer loans via crypto or fiat currency to start-ups by-way of a private investment network."
                 },
                 {
