@@ -47,10 +47,10 @@ const Card = ({data}) => {
       switch(word.trim()){
           /* Take the incoming data and look for instances of "Node" and "React". If found, replace the words with the corresponding icons.*/
           case "Node":
-              return <FaNode color="6cc24a" size="2em" key={index}/>
+              return <FaNode color="#6cc24a" size="2em" key={index}/>
               
           case "React":
-              return <FaReact color="00d8ff" size="1.5em"  key={index}/>
+              return <FaReact color="#00d8ff" size="1.5em"  key={index}/>
               
           case "Sass":
               return <FaSass color="#bf4080" size="1.5em"  key={index}/>
