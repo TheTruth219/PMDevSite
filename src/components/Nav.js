@@ -2,9 +2,6 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import PropTypes from "prop-types"
 import React,{Component} from "react"
 import styled from "styled-components"
-import {Link,withPrefix} from "gatsby"
-
-
 
 const LinkBase = styled.li`
   margin-left:1em;
@@ -155,25 +152,39 @@ export default class Nav extends Component {
         
         this.hamburger.addEventListener('click', () => {
           this.hamburger.classList.toggle('animate');
-          if(this.mobileNav.style.height==="300px"){
+          if(this.path === "/"){
+            if(this.mobileNav.style.height==="250px"){
               this.mobileNav.style.height = "45px";
+              }else{
+              this.mobileNav.style.height = "250px";
+              }
           }else{
-            this.mobileNav.style.height = "300px";
+            if(this.mobileNav.style.height==="400px"){
+              this.mobileNav.style.height = "45px";
+            } else {
+            this.mobileNav.style.height = "400px";
+            }
           }
+           
         });
     
   }
     
 render(){
   this.pageNavLinks = this.props.data.map( (header,index)=>{
-    if(header !== "Home" && header !== "Blog"){
-      return <LinkBase className="links" key={index}><Link to={withPrefix(this.path)+"#"+header.toLowerCase()}>{header.toUpperCase()}</Link></LinkBase>
-    }else if(header ==="Home"){
-      return <LinkBase className="links" key={index}><AniLink swipe to="/">{header.toUpperCase()}</AniLink></LinkBase>
-    }else{
-      return <LinkBase className="links" key={index}><AniLink swipe to={"/"+header.toLowerCase()}>{" |  " + header.toUpperCase()}</AniLink></LinkBase>
-      
+
+    switch(header){
+      case "Home":
+        return <LinkBase className="links" key={index}><AniLink swipe to="/">{header.toUpperCase()}</AniLink></LinkBase>
+      case "Blog":
+        return <LinkBase className="links" key={index}><AniLink swipe to={"/"+header.toLowerCase()}>{" |  " + header.toUpperCase()}</AniLink></LinkBase>
+      case "Product":
+      case "Development":
+        return <LinkBase className="links" key={index}><AniLink swipe to={"/"+header.toLowerCase()}>{header.toUpperCase()}</AniLink></LinkBase>
+      default:
+        return <LinkBase className="links" key={index}> <a href={"#"+header.toLowerCase()}>{header.toUpperCase()}</a></LinkBase>
     }
+    
   });
 
     return (
