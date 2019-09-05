@@ -19,6 +19,12 @@ margin:auto;
 padding-top:50px;
 justify-content:center;
 
+.img_container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
 .product_link:hover,.develop_link:hover{
     transform:scale(1.1);
     transition: all .4s;
@@ -42,7 +48,7 @@ justify-content:center;
 }
 h1{
     color:#FFFFFF;
-    margin-bottom:0;
+    margin-bottom:.3em;
     transition:transform .4s, opacity 1.5s;
 
 }
@@ -67,6 +73,7 @@ a {
     z-index:10;
     align-self: center;
     }
+
 .link_product{
     left:0;
 
@@ -90,7 +97,13 @@ p{
     opacity:1;
     transition: all 2s
 }
-
+.hero_children {
+    position: absolute;
+    margin-left: 4em;
+    align-self: center;
+    width: 32%;
+    left: -30px;
+}
 
 
 @media screen and (max-width: 700px){
@@ -106,8 +119,32 @@ p{
 }
 @media screen and (max-width: 567px){
     .hero_children{
+        position: initial; 
+        align-self: center;
+        width: auto; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 4em;  
+        margin: 18% 5% 18% 5%;
+        h1{
+            font-size:2.25rem;
+            text-align: center;
+        }
+        q{
+            font-size:15px;
+        }
+        p{
+            padding:0 0 0 20px;
+            margin:0;
+            max-width:260px;
+        }
+    }
+    .img_container{
        display:none;
     }
+    
 }
 
 `
@@ -115,15 +152,7 @@ p{
 
 export default class Hero extends Component {
 
-    constructor(props){
-        super(props);
-        this.developHeader = null;
-        this.productHeader = null;
-        this.productAnimate = null;
-        this.devAnimate = null;
-        this.animationBase = null;
-
-    }
+    
     
     componentDidMount(){
       
@@ -215,9 +244,9 @@ export default class Hero extends Component {
        } else {
          MainHero =  
         <HeroBase style={{backgroundColor:this.props.color, backgroundImage:this.props.grad}}>
-            <div style={{position:`relative`,display:`flex`}}>
-             {this.props.Dev?<DevImage/>:<ProdImage/>}
-             <div className="hero_children"style={{position:`absolute`,marginLeft:`3em`,alignSelf:`center`,width:`34%`,left:`-30px`}}>
+            <div style={{position:`relative`,display:`flex`,flexDirection:`column`,width:`1200px`,justifyContent: `center`}}>
+             <div className="img_container">{this.props.Dev?< DevImage />:<ProdImage />}</div>
+             <div className="hero_children">
               {this.props.children} 
              </div> 
             </div>

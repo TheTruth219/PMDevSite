@@ -19,7 +19,7 @@ const ProductPage = () => (
   <Layout data={data.Product[0].Navigation}>
     <SEO title="Product" />
     <PageBase>
-      <Hero color="#4955C4"src={"./static/ProdHero2.png"}>
+      <Hero color="#4955C4">
         <h1>Product Manager</h1>
         <p><q>Be stubborn on vision but flexible on details.</q><br/>- Jeff Bezos</p>
       </Hero>

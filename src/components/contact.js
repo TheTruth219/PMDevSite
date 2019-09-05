@@ -55,7 +55,7 @@ export default function Contact () {
 
 return (
   <ContactBase id="contact">
-    <h2 id="contact">Interested in working together or just grabbing a cup of coffee?</h2>
+    <h2 id="contact">Let's Connect!</h2>
     <div className="wrapper">
       <a className="contact_button"href="mailto:stephen@cloudpoweredtech.com?subject=We%20Should%20Talk%20Soon" role="button">Contact me</a>
     </div>

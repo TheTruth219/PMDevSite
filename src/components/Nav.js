@@ -30,9 +30,10 @@ const LinkBase = styled.li`
       bottom: 0px;
     }
     
-    &:hover:before,&:hover:after{
+    &:active, &:hover:before,&:hover:after{
       opacity: 1;
       width: 100%;  
+      font-weight:bold;
     }
   }
   @media screen and (max-width: 700px){
@@ -122,8 +123,32 @@ const MobileNavBase = styled.nav`
 `
 export default class Nav extends Component {
   
-  
+  state={
+    expanded:false
+  }
     
+  expand = ()=>{
+    this.hamburger.classList.toggle('animate');
+          if(this.path === "/"){
+            if(this.mobileNav.style.height==="250px"){
+              this.mobileNav.style.height = "45px";
+              this.setState({expanded:false})
+              }else{
+              this.mobileNav.style.height = "250px";
+              this.setState({expanded:true})
+              }
+          }else{
+            if(this.mobileNav.style.height==="400px"){
+              this.mobileNav.style.height = "45px";
+              this.setState({expanded:false})
+            } else {
+            this.mobileNav.style.height = "400px";
+            this.setState({expanded:true});
+            }
+          }
+           
+     
+  }
 
   componentDidMount(){
     
@@ -151,24 +176,18 @@ export default class Nav extends Component {
         }
         
         this.hamburger.addEventListener('click', () => {
-          this.hamburger.classList.toggle('animate');
-          if(this.path === "/"){
-            if(this.mobileNav.style.height==="250px"){
-              this.mobileNav.style.height = "45px";
-              }else{
-              this.mobileNav.style.height = "250px";
-              }
-          }else{
-            if(this.mobileNav.style.height==="400px"){
-              this.mobileNav.style.height = "45px";
-            } else {
-            this.mobileNav.style.height = "400px";
-            }
-          }
+          this.expand();
            
         });
     
   }
+ componentWillUnmount(){
+  this.hamburger.removeEventListener('click', () => {
+    this.expand();  
+  });
+  
+ }
+   
     
 render(){
   this.pageNavLinks = this.props.data.map( (header,index)=>{
@@ -189,12 +208,12 @@ render(){
 
     return (
       <>
-        <NavBarBase ref={nav => this.navBar = nav}>
+        <NavBarBase  ref={nav => this.navBar = nav}>
           <ul style={{display:"flex", listStyleType:"none",marginBottom:"0",maxWidth:"1200px"}}>
             {this.pageNavLinks}
           </ul> 
         </NavBarBase>
-        <MobileNavBase ref={nav => this.mobileNav = nav} >
+        <MobileNavBase  ref={nav => this.mobileNav = nav} >
           <div ref={div => this.hamburger = div} className="hamburger">
             <div className="hamburger_line"></div>
           </div>
