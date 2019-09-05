@@ -68,15 +68,14 @@ h1{
        
       render(){
     return (
-        <ValueBase>
+        <ValueBase id="tools">
             <h1>{this.props.data[0].title}</h1>
             <Hr height="4px"width="40px" grad="linear-gradient(45deg,#05D3DE,#28C4F0)"/>
             <div className="skillsetContainer">
               <div className="skillset_copy" style={{alignSelf:`center`}}>
                 <h2>{this.props.data[1].subtitle}</h2>
                 <p>{this.props.data[2].copy}</p>
-              </div>
-              
+              </div>             
               {this.Graph}
             </div>
             

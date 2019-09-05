@@ -11,9 +11,9 @@ import Values from "../../components/values";
 const Development = () => (
   <Layout data={data.Development[0].Navigation} >
     <SEO title="Development" />
-    <Hero Dev color="#07ACDA" src="./static/FED2.png">
+    <Hero Dev color="#07ACDA" >
       <h1 >Developer</h1>
-      <p>I build cool things. </p>
+      <p><q>Simplicity is the soul of efficiency.</q><br/> – Austin Freeman </p>
     </Hero>
     <About data={data.Development[2].About}/>
     <Methods data={data.Development[3].Methods}/>

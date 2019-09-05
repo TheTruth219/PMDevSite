@@ -27,7 +27,7 @@ const ImageBase = styled.img`
 const ProdImage = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "images/ProdHero2.png" }) {
+      placeholderImage: file(relativePath: { eq: "ProdHero2.png" }) {
         childImageSharp {
           fluid(maxWidth: 900) {
             ...GatsbyImageSharpFluid

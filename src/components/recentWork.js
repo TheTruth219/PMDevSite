@@ -62,7 +62,7 @@ const RecentWork = ({data}) => {
     };
     return (
         <WorkBase id="projects">
-            <h1>Recent Work</h1>
+            <h1>Projects</h1>
             <Hr height="4px"width="40px" grad="linear-gradient(45deg,#05D3DE,#28C4F0)"/>
             <div >
                 <Slider {...settings}>
