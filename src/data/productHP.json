@@ -8,10 +8,10 @@
         },
         {
             "Methods":[
-                ["Vision-driven","I believe great goals and strategies are direct off-spring of a solid understanding and digestion of the global vision"],
-                ["Technical","My technical background allows me to understand opportunity cost and technical debt from both low and high level perspectives."],
+                ["Vision-driven","I believe great products are the direct off-spring of a solid understanding and digestion of the global vision. I set goals that align with and help drive that vision."],
+                ["Technical","My technical background allows me to understand opportunity cost and technical debt from both low and high level perspectives, so I can work ideally with technical teams."],
                 ["User-focused","I understand the we are not our users, and I seek to understand \"who\" that is and \"what\" problem we need to solve for them"],
-                ["Data-informed","Data should influence and inform our decisions, not make them for us. Ultimately it's our job to put the story together."]
+                ["Data-informed","Data should influence and inform our decisions, not make them for us. I focus on putting that story together."]
             ]
         },
         {
@@ -21,12 +21,15 @@
                 {"copy":"Ultimately tools are meant to assist the user in accomplishing a particular task at hand. These are the tools that help me implement my methodology and ultimately empower my team and I to manage products successfully. This visualization is meant to drive-home a deeper understanding in how these tools relate to one-another and essentially help move the needle."},
                 {
                     "chartData":{
-                        "Leadership": { "OKR/Roadmaps": 1, "Requirements": 1, "Market Research": 1,"BL Grooming":1,"Strategy":1},
-                        "BL Grooming": { "Requirements": 1, "Strategy": 1, "Metrics": 1 },
-                        "Requirements": { "Strategy": 1, "BL Grooming": 1 },
-                        "Market Research": { "Strategy": 1, "Metrics": 1, "OKR/Roadmaps": 1 },
-                        "OKR/Roadmaps": { "Biz Dev": 3, "Market Research": 1 },
-                        "Strategy": {"Market Research": 3, "Leadership": 3, "Metrics": 2}
+                        "Leadership": { "OKR/Roadmaps": 1, "Requirements": 1, "Market Research": 1,"Features":1,"Strategy":1},
+                        "Features": { "Requirements": 1, "Strategy": 1, "Metrics": 1 },
+                        "Requirements": { "Strategy": 1, "Features": 1 },
+                        "Market Research": { "Strategy": 1, "Metrics": 1, "OKR/Roadmaps": 1 ,"Hubspot":1},
+                        "OKR/Roadmaps": { "Bus. Dev": 3, "Market Research": 1 },
+                        "Strategy": {"Market Research": 3, "Leadership": 3, "Metrics": 2, "Hotjar":1},
+                        "Aha!": {"Strategy":2, "OKR/Roadmaps":2, "Leadership":1},
+                        "User-Feedback":{"Typeform":2, "Hubspot":1, "Hotjar":2,"Metrics":2},
+                        "Hubspot":{"Bus. Dev":2,"User-Feedback":1, "Typeform":1, "Metrics":2}
                         
                        
                       }
