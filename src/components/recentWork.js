@@ -18,9 +18,13 @@ h1{
 `
 
 const RecentWork = ({data}) => {
-    let cards = data.map((card,index) => (
-        <Card data={card} key={index}/>  
-    ));
+    
+      let cards = data.map((card,index) => (
+            <Card data={card} key={index}/>  
+        ));  
+        
+    
+    
     var settings = {
         dots: true,
         arrows:true,
