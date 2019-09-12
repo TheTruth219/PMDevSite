@@ -5,7 +5,10 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import HeroImage from "./low-level/heroImage"
 import DevImage from "./low-level/devHero";
 import ProdImage from "./low-level/prodHero";
-// import TweenLite from "gsap"
+import Product from "../images/Prod_Graphic.png";
+import Develop from "../images/Dev_Graphic.png";
+import Main from "../images/MainGraphic.png"
+
 
 
 
@@ -25,6 +28,9 @@ justify-content:center;
     flex-direction: column;
 }
 
+.product_link,.develop_link{
+    padding:2em;
+}
 .product_link:hover,.develop_link:hover{
     transform:scale(1.1);
     transition: all .4s;
@@ -63,7 +69,6 @@ h1{
 }
 a {
     width: 38.5%;
-    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,19 +79,15 @@ a {
     align-self: center;
     }
 
-.link_product{
-    left:0;
 
-}
 p{
     padding-right: 50px;
     margin-right: 50px;
     color:white;
 }
-.link_dev {
-    right: 0; 
+
    
-}
+
 .fadeOut{
     opacity:0;
     transition: all 2s
@@ -156,11 +157,10 @@ export default class Hero extends Component {
     
     componentDidMount(){
       
-        let productTrigger = document.querySelector(".link_product");
-        let devTrigger = document.querySelector(".link_dev");
 
-        if (productTrigger){
-            productTrigger.addEventListener("mouseover",()=>{
+        if (this.productHeader != null){
+            try{
+            this.productHeader.addEventListener("mouseover",()=>{
                 if(this.developHeader.classList.contains("fadeIn")){
                     this.developHeader.classList.remove("fadeIn"); 
                     this.productAnimate.classList.remove("fadeOut");
@@ -172,7 +172,7 @@ export default class Hero extends Component {
                 }
                 
             });
-            productTrigger.addEventListener("mouseout",()=>{
+            this.productHeader.addEventListener("mouseout",()=>{
                 if(this.developHeader.classList.contains("fadeOut")){
                     this.developHeader.classList.remove("fadeOut"); 
                     this.animationBase.classList.remove("fadeOut");
@@ -185,10 +185,14 @@ export default class Hero extends Component {
                 
                 
  
-            });
+                });
+            }catch(e){
+                console.error(e);
+            }
         }
-        if (devTrigger){
-            devTrigger.addEventListener("mouseover",()=>{
+        if (this.developHeader != null){
+            try{
+            this.developHeader.addEventListener("mouseover",()=>{
                 if(this.productHeader.classList.contains("fadeIn")){
                     this.productHeader.classList.remove("fadeIn");                 
                     this.devAnimate.classList.remove("fadeOut");
@@ -200,7 +204,7 @@ export default class Hero extends Component {
                 }
                 
             });
-           devTrigger.addEventListener("mouseout",()=>{
+            this.developHeader.addEventListener("mouseout",()=>{
                 if(this.productHeader.classList.contains("fadeOut")){
                     this.productHeader.classList.remove("fadeOut");
                     this.animationBase.classList.remove("fadeOut");
@@ -214,6 +218,9 @@ export default class Hero extends Component {
                 
 
             });
+            }catch(e){
+                console.log(e)
+            }
         }    
     }
    
@@ -228,16 +235,16 @@ export default class Hero extends Component {
         <HeroBase style={{backgroundImage:this.props.grad}}>
             <div style={{maxWidth: `1300px`,display: `flex`,flexDirection:`column`,position: `relative`,
     justifyContent: `center`}}>
-                <AniLink  className="link_product" color="black" paintDrip to="/product"><h1 className="product_link"  ref={h1 => this.productHeader = h1} >{this.props.head_1}</h1></AniLink>
+                <AniLink  style={{left:0}} fade to="/product"><h1 className="product_link"  ref={h1 => this.productHeader = h1} >{this.props.head_1}</h1></AniLink>
                 
-                <AniLink  className="link_dev" color="black" paintDrip to="/development"><h1 className="develop_link" ref={h1 => this.developHeader = h1} >{this.props.head_2}</h1></AniLink>
+                <AniLink  style={{right:0}} fade to="/development"><h1 className="develop_link" ref={h1 => this.developHeader = h1} >{this.props.head_2}</h1></AniLink>
             
             
 
                 <HeroImage/>
-                <img ref={img => this.productAnimate =img }className="hero_img1" alt={this.props.alt} src="https://lh3.googleusercontent.com/-Ukux-GeLJDE/XW2i6mlFNQI/AAAAAAAAEP0/5jRBXMyk5qE2oDy7HSKP7FVxRhupTNbDACK8BGAs/s0/Prod_Graphic.png"/>
-                <img ref={img => this.devAnimate =img }className="hero_img2" alt={this.props.alt} src="https://lh3.googleusercontent.com/-pgsxv2lXgDg/XW2jQRfpyaI/AAAAAAAAEQM/l-H4lHH79f4jk66rAAA7eqpBvztt23UkwCK8BGAs/s0/Dev_Graphic.png"/> 
-                <img ref={img => this.animationBase =img }className="hero_base" alt={this.props.alt} src="https://lh3.googleusercontent.com/-kzLq4pcQx1k/XW2jUvX4-YI/AAAAAAAAEQY/bn0xTtoXYz0ztrgUdqsarYjnw2kZQS6iQCK8BGAs/s0/MainGraphic.png"/> 
+                <img ref={img => this.productAnimate =img }className="hero_img1" alt={this.props.alt} src={Product}/>
+                <img ref={img => this.devAnimate =img }className="hero_img2" alt={this.props.alt} src={Develop}/> 
+                <img ref={img => this.animationBase =img }className="hero_base" alt={this.props.alt} src={Main}/> 
             
             </div>
        </HeroBase>

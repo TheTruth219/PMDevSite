@@ -12,7 +12,7 @@ import Nav from "./Nav"
 import "./layout.css"
 
 
-const Layout = ({ data,children,main,blog }) => {
+const Layout = ({ data,children,main,blog}) => {
   if (typeof window !== "undefined") {
     // eslint-disable-next-line global-require
     require("smooth-scroll")('a[href*="#"]')
@@ -20,14 +20,14 @@ const Layout = ({ data,children,main,blog }) => {
   return (
     
     <>
-      <Nav main={main} data={data}/>
+      <Nav  main={main} data={data}/>
       <div
         style={{
           margin: `auto`,
           paddingTop: 0,
         }}
       >
-        <main >{children}</main>
+        <main style={{backgroundColor:`white`}} >{children}</main>
        {!blog? <Contact/>: false}
         <footer style={{
           margin:`auto`,
