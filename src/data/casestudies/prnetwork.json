@@ -1,0 +1,34 @@
+{
+    "PrNetwork":[
+            {
+                "Navigation":["Home","Contact","Blog","Back"]
+            },
+
+            {"Hero":
+             {
+                "Title":"Public Reputation Network",
+                "Copy":"PR.Network is a company that aims to revolutionize the way we transact with reputation. The core premise centers around users on their platform creating reputation cards for people and having the community vote on the individual cards. Votes are either positive or negative.",
+                "Image":"https://media.giphy.com/media/h7XY8bWFnT9X1HnTXO/giphy.gif",
+                "Alt":"prnetwork"
+             }
+            },
+            {"Role":{
+                "Title":"My Role",
+                "Copy":"As a consulting Product Manager I worked closely with the founders and multi-disciplinarian team to help take PR.Network from concept to launch. I conducted research, interviews, established OKR’s and oversaw the general development and growth of the platform. <br/> <br/> As a board member I had additional responsibilities that consisted of meeting with potential investors and helping shape the marketing plan and the overall company vision. "
+             }
+            },
+            {"Product_Analysis":
+                {
+                    "Title":"Product Analysis",
+                    "Copy":"This video explains the overall concept of how the platform works and the role the users play in the reputation management process. Users log into the platform and vote in a binary fashion on celebrities and brands. The benefit of going binary was to be able to get more data in a straight-forward way from users. In order to prevent bad actors, or people logging into the system attempting to manipulate the voting pool, we created a system called BBV or Balanced Binary Voting. This ensured that as the product scaled and opinions became more diverse, we could spot bad actors much more quickly and ensure the fidelity of our feedback."
+                }
+            },
+            {"Product_Evolution":
+                {
+                    "Title":"Product Evolution",
+                    "Copy":"PR.Network originated from the founders wanting to have a decentralized way of measuring public sentiment. Celebrities and companies have a major impact on our day to day lives, and it only seemed fitting that the public be able to have a say so about people and brands that have that type of influence. Ultimately the goal was to create a central platform that was fed by public sentiment for celebrities and companies to be able to gauge the public sentiment of their brand.<br/><br/> We were able to validate the idea and concept with a few PR contacts working at industry leading firms in Los Angeles. We developed our original design and tested it in the wild at a conference, and were able to validate the need for an alternate user experience to expedite the time it took to get users logged in to vote. The roadmap initially had an app budgeted for, but interviews, and research into the user-flow and personas ultimately didn’t support that experience.<br/><br/> In the end we arrived at an api driven solution that would cut down on our marketing spend by leveraging existing audiences on blogs and publications. "
+                }
+
+            }
+        ]
+}

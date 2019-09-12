@@ -4,14 +4,14 @@
             "Navigation":["Home","About","Tools","Projects","Contact","Blog","Development"]
         },
         {
-            "About":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus feugiat egestas. Aenean sed gravida nisi. Fusce iaculis porttitor dictum. Aliquam nec neque ligula. Nullam pulvinar, nisl porta vehicula faucibus, felis dui dignissim nulla, dapibus congue arcu mi in nisl. Proin et gravida neque. Fusce eu ultrices nulla, sit amet tincidunt neque. Quisque convallis nec lectus et faucibus. Sed mi mi, elementum ut molestie a, vestibulum vel quam. Curabitur sagittis nisi felis, a tristique orci molestie sit amet."   
+            "About":"<b>Life and technology mirror each other</b> in so many ways. With life as the individual grows so does the responsibility. It takes a village to raise a child, and it takes a solid team to bring a product to life and on through maturity. I catalyze talented people around a solid product vision, and lead by serving and empowering those talented people to bring that vision to life. I consider myself a systematic creative, making the hard things simple using a multi-faceted approach to understanding and solving problems, listening to the voice of the user and collaborating and enabling teams to do their best work. I enjoy the complexity of uncertainty, embracing optimism and the opportunities that come with the life of a product. "   
         },
         {
             "Methods":[
                 ["Vision-driven","I believe great products are the direct off-spring of a solid understanding and digestion of the global vision. I set goals that align with and help drive that vision."],
                 ["Technical","My technical background allows me to understand opportunity cost and technical debt from both low and high level perspectives, so I can work ideally with technical teams."],
                 ["User-focused","I understand the we are not our users, and I seek to understand \"who\" that is and \"what\" problem we need to solve for them"],
-                ["Data-informed","Data should influence and inform our decisions, not make them for us. I focus on putting that story together."]
+                ["Data-informed","Data should influence and inform our decisions, not make them for us. I focus on putting that story together so we can make informed decisions that drive metrics."]
             ]
         },
         {
@@ -21,15 +21,16 @@
                 {"copy":"Ultimately tools are meant to assist the user in accomplishing a particular task at hand. These are the tools that help me implement my methodology and ultimately empower my team and I to manage products successfully. This visualization is meant to drive-home a deeper understanding in how these tools relate to one-another and essentially help move the needle."},
                 {
                     "chartData":{
-                        "Leadership": { "OKR/Roadmaps": 1, "Requirements": 1, "Market Research": 1,"Features":1,"Strategy":1},
+                        "Leadership": { "OKR/Roadmaps": 1, "Requirements": 1, "Research": 1,"Features":1,"Strategy":1},
                         "Features": { "Requirements": 1, "Strategy": 1, "Metrics": 1 },
                         "Requirements": { "Strategy": 1, "Features": 1 },
-                        "Market Research": { "Strategy": 1, "Metrics": 1, "OKR/Roadmaps": 1 ,"Hubspot":1},
-                        "OKR/Roadmaps": { "Bus. Dev": 3, "Market Research": 1 },
-                        "Strategy": {"Market Research": 3, "Leadership": 3, "Metrics": 2, "Hotjar":1},
+                        "Research": { "Strategy": 1, "Metrics": 1, "OKR/Roadmaps": 1 ,"Hubspot":1},
+                        "OKR/Roadmaps": { "Bus. Dev": 3, "Research": 1 },
+                        "Strategy": {"Research": 3, "Leadership": 3, "Metrics": 2, "Hotjar":1},
                         "Aha!": {"Strategy":2, "OKR/Roadmaps":2, "Leadership":1},
                         "User-Feedback":{"Typeform":2, "Hubspot":1, "Hotjar":2,"Metrics":2},
-                        "Hubspot":{"Bus. Dev":2,"User-Feedback":1, "Typeform":1, "Metrics":2}
+                        "Hubspot":{"Bus. Dev":2,"User-Feedback":1, "Typeform":1, "Metrics":2},
+                        "Metrics": {"Hotjar":2}
                         
                        
                       }
@@ -41,36 +42,28 @@
         {
             "Projects" : [
                 {
-                    "name":"PR Chat",
-                    "stack":"Node, React, Express, Webpack, Auth0",
-                    "link":"https://prnetwork-chat.herokuapp.com",
-                    "img":"https://media.giphy.com/media/1ykhYp1xXgSM6zofZT/giphy.gif",
-                    "desc":"A Real-time Secure Chat Client",
-                    "copy":"I've always been enthused with the concept of collaboration and sharing ideas. This was a rough idea pitched to a client that centered around community engagement. All you do is sign in with any of the SSO(Single Sign-on) methods, and you can chat with anyone currently signed in"
+                   
+                    "link":"/product/petsmart",
+                    "img":"https://lh3.googleusercontent.com/-556Af9Lt40c/XXQqMj-6ocI/AAAAAAAABis/HNJqVPLM60sP8gOaVNqSXo3WPuH0QQBegCK8BGAs/s0/2019-09-07.png"
+                    
                 },
                 {
-                    "name":"FlashCards",
-                    "stack":"Node, Pug/Jade, Express, Cookie Parser",
-                    "link":"https://flshcards.herokuapp.com",
-                    "img":"https://media.giphy.com/media/1jWCg8teSg1lxSvMnU/giphy.gif",
-                    "desc":"An app to help you study",
-                    "copy":"This basic app uses dynamic routing with logic, and cookies to generate a random card. It then allows you to flip the card to get the answer to the question asked. In providing a username, the app takes that information and stores it as a cookie and uses that cookie to apply conditional routing."
+
+                    "link":"/product/prnetwork",
+                    "img":"https://lh3.googleusercontent.com/-bXN306V9fOc/XXQq2kri2SI/AAAAAAAABi0/8R8XGHg-oeU4T3gWERENkwH-r3Cu3yqcACK8BGAs/s0/2019-09-07.png"
+                    
                 },
                 {
-                    "name":"Nota Network",
-                    "stack":"Node, React, Coin Desk API, Highcharts",
-                    "link":"https://thetruth219.github.io/NOTANetwork-Dash/",
-                    "img":"./static/nota_loan_request.png",
-                    "desc":"A prototype investor dashboard",
-                    "copy":"I'm very interested in how crypto-currencies and blockchain technology are revolutionizing different industries, so I'm currently working with companies in this space.This would allow investors to offer loans via crypto or fiat currency to start-ups by-way of a private investment network."
+
+                    "link":"/product/wonderscience",
+                    "img":"https://lh3.googleusercontent.com/-KGgjAImHHko/XXQq3Lj9H4I/AAAAAAAABi4/SVg4rY0pZfEQTyGXUmc07htQOmHR5eQbwCK8BGAs/s0/2019-09-07.png"
+ 
                 },
                 {
-                    "name":"Who's Home",
-                    "stack":"Node, React, Google Maps API",
-                    "link":"https://whos-home.herokuapp.com",
-                    "img":"https://images.ctfassets.net/1es3ne0caaid/2vD20XayMY4cQOQAyWIYyQ/7e40fd4debb4db6f9d7c83a54b9106f6/nextjs-geofencing-demo.png",
-                    "desc":"A real-time geo-fencing app",
-                    "copy":"This was just me experimenting with the Google Maps API, to see if I could replicate something similar to Find My Friends. Currently the app generates random demo personas based off a base location radius. I intend to make it user specific with Auth0 and use location tracking to bring it to life."
+ 
+                    "link":"/product/openforce",
+                    "img":"https://lh3.googleusercontent.com/-_6m7jfAYcCg/XXQq4KpzbAI/AAAAAAAABi8/K6CzyDvzmMk-t4zLdzZvtT_l9_wypR6zACK8BGAs/s0/2019-09-07.png"
+
                 }
             ]
         }

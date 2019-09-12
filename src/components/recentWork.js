@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from "styled-components"
 import Card from "./low-level/cards"
+import ProductCard from "./low-level/product_card"
 import Slider from "react-slick"
 import Hr from "./low-level/hr"
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const WorkBase = styled.section`
 display:flex;   
@@ -12,20 +13,30 @@ flex-direction: column;
 padding:60px 0 30px 0;
 background-color:#F8F8F8;
 
-h1{
-    text-align:center;
-}
+    h1{
+        text-align:center;
+    }
 `
 
-const RecentWork = ({data}) => {
-    
-      let cards = data.map((card,index) => (
-            <Card data={card} key={index}/>  
+export default class RecentWork extends Component {
+       
+ 
+render(){
+    if(this.props.dev){
+            this.DevCards = this.props.data.map((card,index) => (
+           <Card 
+            data={card} 
+            key={index}/>  
+               
         ));  
-        
+    }else{
+            this.ProductCards = this.props.data.map((card,index)=>
+            <ProductCard data={card} key={index}/>
+        );
+    }
     
     
-    var settings = {
+    let settings = {
         dots: true,
         arrows:true,
         infinite: true,
@@ -64,18 +75,26 @@ const RecentWork = ({data}) => {
         }]
        
     };
+
+    let Development = <div>
+                        <Slider {...settings}>
+                            {this.DevCards}
+                        </Slider>
+                      </div> ;
+    let Product = <div style={{maxWidth:`1200px`,display:`flex`,flexDirection:`row`,margin:`auto`,flexWrap:`wrap`}}>{this.ProductCards}</div>;
+
+    
+    
     return (
         <WorkBase id="projects">
             <h1>Projects</h1>
             <Hr height="4px"width="40px" grad="linear-gradient(45deg,#05D3DE,#28C4F0)"/>
-            <div >
-                <Slider {...settings}>
-                    {cards}
-                </Slider>   
-            </div>
+            
+               {this.props.dev?Development:Product}      
+            
             
         </WorkBase>
-    )
+        )
+    }
 }
 
-export default RecentWork

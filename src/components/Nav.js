@@ -1,4 +1,6 @@
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import Link from "gatsby-plugin-transition-link";
+import { withPrefix } from "gatsby"
 import PropTypes from "prop-types"
 import React,{Component} from "react"
 import styled from "styled-components"
@@ -10,8 +12,10 @@ const LinkBase = styled.li`
   position:relative;
  
   a{
-    text-decoration:none;
+  
+    
     color:white;
+    text-decoration:none;
     &:before, &:after{
       position: absolute;
       opacity: 0;
@@ -62,7 +66,7 @@ const NavBarBase = styled.nav`
 `
 const MobileNavBase = styled.nav`
   position:fixed;
-  top:0;
+  top:1;
   z-index:100;
   min-width:100%;
   transition: all 0.5s;
@@ -122,10 +126,14 @@ const MobileNavBase = styled.nav`
   }
 `
 export default class Nav extends Component {
-  
-  state={
-    expanded:false
+  constructor(props){
+    super(props);
+    this.state={
+      expanded:false
+    }
+   
   }
+   
     
   expand = ()=>{
     this.hamburger.classList.toggle('animate');
@@ -152,6 +160,7 @@ export default class Nav extends Component {
 
   componentDidMount(){
     
+      if(window){
 
         this.path = window.location.pathname.trim();
         
@@ -159,49 +168,58 @@ export default class Nav extends Component {
         let links = document.querySelectorAll(".links")
 
         let scrollFunction = () => {
-          if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+          if(window.location.href.includes('product/')){
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
             this.navBar.style.backgroundColor = "#ffffff8a";
+            }else {
+              this.navBar.style.backgroundColor = "transparent";
+            }
             links.forEach(link=> {
               link.classList.add("dark");
-            });
-            
-      
-          } else {
-            this.navBar.style.backgroundColor = "transparent";
-            links.forEach(link=> {
-              link.classList.remove("dark");
-            });
-           
-          }
-        }
-        
+           }); 
+            }else{
+              if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                this.navBar.style.backgroundColor = "#ffffff8a";
+                links.forEach(link=> {
+                  link.classList.add("dark");
+                });      
+                } else {
+                  this.navBar.style.backgroundColor = "transparent";
+                  links.forEach(link=> {
+                    link.classList.remove("dark");
+                  });          
+            }
+          }  
+        } 
+          
+          
         this.hamburger.addEventListener('click', () => {
-          this.expand();
-           
+          this.expand();  
         });
-    
+        
+      }
   }
  componentWillUnmount(){
   this.hamburger.removeEventListener('click', () => {
     this.expand();  
-  });
-  
+  }); 
  }
-   
-    
+       
 render(){
   this.pageNavLinks = this.props.data.map( (header,index)=>{
 
     switch(header){
       case "Home":
-        return <LinkBase className="links" key={index}><AniLink swipe to="/">{header.toUpperCase()}</AniLink></LinkBase>
+        return <LinkBase  className="links" key={index}><AniLink fade to="/">{header.toUpperCase()}</AniLink></LinkBase>
       case "Blog":
-        return <LinkBase className="links" key={index}><AniLink swipe to={"/"+header.toLowerCase()}>{" |  " + header.toUpperCase()}</AniLink></LinkBase>
+        return <LinkBase  className="links" key={index}><AniLink swipe to={"/"+header.toLowerCase()}>{" |  " + header.toUpperCase()}</AniLink></LinkBase>
+      case 'Back':
+        return <LinkBase className="links" key={index}><AniLink fade to={"/product"}>{ header.toUpperCase()}</AniLink></LinkBase>
       case "Product":
       case "Development":
-        return <LinkBase className="links" key={index}><AniLink swipe to={"/"+header.toLowerCase()}>{header.toUpperCase()}</AniLink></LinkBase>
+        return <LinkBase  className="links" key={index}><AniLink  fade to={"/"+header.toLowerCase()}>{header.toUpperCase()}</AniLink></LinkBase>
       default:
-        return <LinkBase className="links" key={index}> <a href={"#"+header.toLowerCase()}>{header.toUpperCase()}</a></LinkBase>
+        return <LinkBase  className="links" key={index}> <Link to={withPrefix(this.path)+"#"+header.toLowerCase()}>{header.toUpperCase()}</Link></LinkBase>
     }
     
   });
