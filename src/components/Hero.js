@@ -152,78 +152,80 @@ p{
 
 
 export default class Hero extends Component {
-
+   
     
+    prodAnimate = ()=>{
+        if(this.developHeader.classList.contains("fadeIn")){
+            this.developHeader.classList.remove("fadeIn"); 
+            this.productAnimate.classList.remove("fadeOut");
+        }else{
+            this.animationBase.classList.remove("fadeIn");
+            this.animationBase.classList.add("fadeOut");
+            this.developHeader.classList.add("fadeOut");
+            this.productAnimate.classList.add("fadeIn")
+        }
+    } 
+    prodUnanimate = ()=>{
+        if(this.developHeader.classList.contains("fadeOut")){
+            this.developHeader.classList.remove("fadeOut"); 
+            this.animationBase.classList.remove("fadeOut");
+            this.animationBase.classList.add("fadeIn");
+            this.productAnimate.classList.remove("fadeIn");
+            this.productAnimate.classList.add("fadeOut")
+        }else{
+            this.developHeader.classList.add("fadeIn"); 
+        }
+           
+    }
+    developAnimate = () => {
+        if(this.productHeader.classList.contains("fadeIn")){
+            this.productHeader.classList.remove("fadeIn");                 
+            this.devAnimate.classList.remove("fadeOut");
+        }else{
+            this.animationBase.classList.remove("fadeIn");
+            this.animationBase.classList.add("fadeOut");
+            this.productHeader.classList.add("fadeOut"); 
+            this.devAnimate.classList.add("fadeIn")
+        }
+    }
+    devUnanimate = () => {
+        if(this.productHeader.classList.contains("fadeOut")){
+            this.productHeader.classList.remove("fadeOut");
+            this.animationBase.classList.remove("fadeOut");
+            this.animationBase.classList.add("fadeIn");
+            this.devAnimate.classList.remove("fadeIn");
+            this.devAnimate.classList.add("fadeOut")
+
+        }else{
+            this.productHeader.classList.add("fadeIn");
+        }
+        
+
+    }
     
     componentDidMount(){
       
 
-        if (this.productHeader != null){
-            try{
-            this.productHeader.addEventListener("mouseover",()=>{
-                if(this.developHeader.classList.contains("fadeIn")){
-                    this.developHeader.classList.remove("fadeIn"); 
-                    this.productAnimate.classList.remove("fadeOut");
-                }else{
-                    this.animationBase.classList.remove("fadeIn");
-                    this.animationBase.classList.add("fadeOut");
-                    this.developHeader.classList.add("fadeOut");
-                    this.productAnimate.classList.add("fadeIn")
-                }
-                
-            });
-            this.productHeader.addEventListener("mouseout",()=>{
-                if(this.developHeader.classList.contains("fadeOut")){
-                    this.developHeader.classList.remove("fadeOut"); 
-                    this.animationBase.classList.remove("fadeOut");
-                    this.animationBase.classList.add("fadeIn");
-                    this.productAnimate.classList.remove("fadeIn");
-                    this.productAnimate.classList.add("fadeOut")
-                }else{
-                    this.developHeader.classList.add("fadeIn"); 
-                }
-                
-                
- 
-                });
-            }catch(e){
-                console.error(e);
-            }
+        if (this.productHeader){  
+            this.productHeader.addEventListener("mouseover",this.prodAnimate);
+            this.productHeader.addEventListener("mouseout",this.prodUnanimate);          
         }
-        if (this.developHeader != null){
-            try{
-            this.developHeader.addEventListener("mouseover",()=>{
-                if(this.productHeader.classList.contains("fadeIn")){
-                    this.productHeader.classList.remove("fadeIn");                 
-                    this.devAnimate.classList.remove("fadeOut");
-                }else{
-                    this.animationBase.classList.remove("fadeIn");
-                    this.animationBase.classList.add("fadeOut");
-                    this.productHeader.classList.add("fadeOut"); 
-                    this.devAnimate.classList.add("fadeIn")
-                }
-                
-            });
-            this.developHeader.addEventListener("mouseout",()=>{
-                if(this.productHeader.classList.contains("fadeOut")){
-                    this.productHeader.classList.remove("fadeOut");
-                    this.animationBase.classList.remove("fadeOut");
-                    this.animationBase.classList.add("fadeIn");
-                    this.devAnimate.classList.remove("fadeIn");
-                    this.devAnimate.classList.add("fadeOut")
-
-                }else{
-                    this.productHeader.classList.add("fadeIn");
-                }
-                
-
-            });
-            }catch(e){
-                console.log(e)
-            }
+        if (this.developHeader){        
+            this.developHeader.addEventListener("mouseover",this.developAnimate);
+            this.developHeader.addEventListener("mouseout",this.devUnanimate);      
         }    
     }
-   
+   componentWillUnmount(){
+    if (this.productHeader){
+        this.productHeader.removeEventListener("mouseover",this.prodAnimate);
+        this.productHeader.removeEventListener("mouseout",this.prodUnanimate);
+    }
+    if (this.developHeader){
+        this.developHeader.removeEventListener("mouseover",this.developAnimate);
+        this.developHeader.removeEventListener("mouseout",this.devUnanimate);    
+    }
+     
+   }
    render() {
     
     

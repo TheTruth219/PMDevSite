@@ -5,7 +5,7 @@ const Common = styled.section`
 max-width:800px;
 display:grid;
 margin:auto;
-padding:3em 0 3em 0;
+padding:2em 0 2em 0;
 
 ${props =>
 props.color? `background-color:${props.color}`: false}

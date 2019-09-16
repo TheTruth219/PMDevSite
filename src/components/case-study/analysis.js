@@ -8,11 +8,14 @@ margin:auto;
 flex-direction:column;
 
 h2{
-    margin-left: 52.4%;
+    ${props =>
+    props.direction? `margin-left:0`:`margin-left: 52.4%`}   
 }
 div{
     display:flex;
-    flex-direction:row;
+    ${props =>
+    props.direction? `flex-direction:row-reverse`:`flex-direction:row`}
+    
     margin:auto;  
 }
 iframe{
@@ -21,10 +24,20 @@ iframe{
     margin:2em auto;
 }
 p{
-    padding-left:2em;
+    ${props =>
+    props.direction? `padding-left:0; padding-right:2em`:`padding-left:2em`}
+}
+
+img {
+    align-self:center;
+    margin:2em auto; 
 }
 @media screen and (max-width:880px){
     padding:auto 2em;
+    img{
+        margin:auto;
+        margin-bottom:15px;
+    }
     div{
         flex-wrap:wrap;
     }
@@ -49,7 +62,7 @@ export default class Analysis extends Component {
 
     render(){
         return (
-            <AnalysisBase>
+            <AnalysisBase direction={this.props.direction}>
                 <h2>{this.props.data.Title}</h2>
                 <div>
                     {this.props.children}
