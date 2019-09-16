@@ -1,0 +1,48 @@
+{
+    "WonderScience":[
+            {
+                "Navigation":["Home","Contact","Blog","Back"]
+            },
+
+            {"Hero":
+             {
+                "Title":"Wonder Science TV",
+                "Copy":"Wonder Science is a streaming platform dedicated to sharing the beauty of science. The platform has exclusive content that showcases \"Slow-Science\", slow motion videos that reinforce the scientific method through observation.",
+                "Image":"https://media.giphy.com/media/giFOJ2CXm3YGI5EjfQ/giphy.gif",
+                "Alt":"wonderscience"
+             }
+            },
+            {"Role":{
+                "Title":"My Role",
+                "Copy":"<i>As a Product Management consultant, I worked closely with the founder and a multi-disciplinarian team to help take Wonder Science TV from concept to launch. I conducted market research & viability studies, interviews, helped develop the roadmap and MVP's.</i>"
+             }
+            },
+            {"Product_Analysis":
+                {
+                    "Title":"Product Analysis",
+                    "Copy":"Wonder Science focuses on educational science in the form of psychedelic visual and audio stimulation. Delving into topics in biology, physics, chemistry and mineralogy, submerging audiences into different dimensions of various scientific landscapes, uncovering worlds that are all around us but normally unseen. Slow-Science is a media movement that seeks to educate while removing the cognitive complexity of information. The content can range from minutes to three-hour long episodes with the sole purpose of science by observation participation. Content is created by some of the top scientist at Universities and laboratories around the world. A wide variety of music producers and artists have scored and contributed music as well. This video is an example of the content you'd typically find on this platform."
+                }
+            },
+            {"Product_Evolution":
+                {
+                    "Title":"Product Evolution",
+                    "Copy":"Wonder Science was the brainchild of a Hollywood producer wanting to change the way the general public related to science. Science is typically postured as a very cerebral field, and schools cover curriculum that tends to reinforce that outlook. Slow-Science is about being able to observe really complex things in a interesting way that feels relaxing to the average person. We validated the concept by working closely with highschool, and higher education institutions to help launching a channel on Youtube, and running campaigns that targeted people that watched similar channels. There are products on major platforms that also validate Slow-Motion viewing with music playing an active role of driving the experience. We thought the best way to launch the platform would be a Web App that would be available on any platform. We would use analytics to track the users' platforms and other information to support whether we developed native for Android and iOS or for an OTT platform.  "
+                }
+
+            },
+            {"Metrics":
+                {
+                    "Title":"Metrics",
+                    "Copy":"<li>100+ music contributors</li><li>70+ Labs and Universities contributing content daily</li><br/> We noticed an immediate uptick in new users which inflated metrics we were tracking. Unlike platforms that monetize time on the platform, our main concern was the frequency users participated in voting cycles. We found a higher voter frequency co-related with more user sign-ups and referrals. Through a close look at the cohort we were able to verify the new experience had a very positive impact on increasing our CPF (Cycle Participation Frequency) which was the outcome we were hoping for."
+                }
+
+            },
+            {"Takeaways":
+                {
+                    "Title":"Takeaways",
+                    "Copy":"While designing for scale, we thought about utilizing the React & React Native ecosystem, but settled on a Wordpress hosted platform that supported the App Store, Apple Tv, Amazon Fire, and Roku. It was important we had a blog to support the educational aspects are partners were interested in, and that required much less work with WordPress out of the box. Also our roadmap relied on content creators (schools and labs) being able to to have an admin portal to upload and pair content with music. Going this route would allow us to test this with minimal dev time. Today Wonder Science is still a growing platform that is available on App Store, Apple Tv, Amazon Fire, and Roku. <br/> Check it out <a href=\"www.wonderscience.com\" target=\"blank\">here</a>."
+                }
+
+            }
+        ]
+}
