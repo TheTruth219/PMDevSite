@@ -30,7 +30,13 @@ p{
 
 img {
     align-self:center;
-    margin:2em auto; 
+  
+}
+ul{
+    margin-bottom:1em !important;
+}
+li{
+    margin-bottom:0;
 }
 @media screen and (max-width:880px){
     padding:auto 2em;

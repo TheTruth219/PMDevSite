@@ -12,8 +12,6 @@ const LinkBase = styled.li`
   position:relative;
  
   a{
-  
-    
     color:white;
     text-decoration:none;
     &:before, &:after{
@@ -137,7 +135,9 @@ export default class Nav extends Component {
     
   expand = ()=>{
     this.hamburger.classList.toggle('animate');
-          if(this.path === "/"){
+    let routes = ["product/","development/","/blog"];
+
+          if(this.path === "/" || routes.some(word => this.path.includes(word))){
             if(this.mobileNav.style.height==="250px"){
               this.mobileNav.style.height = "45px";
               this.setState({expanded:false})
@@ -200,7 +200,8 @@ export default class Nav extends Component {
       }
   }
  componentWillUnmount(){
-  this.hamburger.removeEventListener('click', () => {
+   this.setState({expanded:false})
+   this.hamburger.removeEventListener('click', () => {
     this.expand();  
   }); 
  }

@@ -6,7 +6,14 @@ max-width:800px;
 display:grid;
 margin:auto;
 padding:2em 0 2em 0;
-
+a{
+    color:black;
+    font-weight:bold;
+    transition: all .2s
+}
+a:hover{
+    ${Math.random() > .5? `color:#05D3DE`:`color:#28C4F0`}
+}
 ${props =>
 props.color? `background-color:${props.color}`: false}
 
