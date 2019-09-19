@@ -26,6 +26,8 @@ justify-content:center;
     position: relative;
     display: flex;
     flex-direction: column;
+    max-width:900px;
+    margin:auto;
 }
 
 .product_link,.develop_link{
@@ -43,7 +45,7 @@ justify-content:center;
     } 
 .hero_img1,.hero_img2 {
     opacity:0;
-    z-index:5;
+    z-index:3;
     transition: opacity .4s;
 }
  
@@ -242,8 +244,10 @@ export default class Hero extends Component {
                 <AniLink  style={{right:0}} fade to="/development"><h1 className="develop_link" ref={h1 => this.developHeader = h1} >{this.props.head_2}</h1></AniLink>
             
             
-
+               
                 <HeroImage/>
+              
+                
                 <img ref={img => this.productAnimate =img }className="hero_img1" alt={this.props.alt} src={Product}/>
                 <img ref={img => this.devAnimate =img }className="hero_img2" alt={this.props.alt} src={Develop}/> 
                 <img ref={img => this.animationBase =img }className="hero_base" alt={this.props.alt} src={Main}/> 

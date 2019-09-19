@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import styled from "styled-components"
 
 
@@ -14,30 +15,34 @@ import styled from "styled-components"
  * - `gatsby-image`: https://gatsby.dev/gatsby-image
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
+const Hero = styled(Img)`
+div{
+  position:absolute;
+}
+picture{
+  display:flex;
+}
+picture > img{
+  margin-bottom: 0;  
+  position:inherit !important;
+  }
 
-const ImageBase = styled.img`
-    -webkit-touch-callout: none;  
-    -webkit-user-drag: none;
-    margin:auto;
-    margin-bottom:0;
-    margin-top:0;
-  
-    z-index:0;
-` 
+`
+
 const ProdImage = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "ProdHero2.png" }) {
+      file(relativePath: { eq: "ProdHero2.png" }) {
         childImageSharp {
-          fluid(maxWidth: 900) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth:900,maxHeight:640 quality:80) {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
     }
   `)
   return(
-    <ImageBase oncopy="return false;" oncut="return false;" oncontextmenu="return false;" src={data.placeholderImage.childImageSharp.fluid.src} />
+    <Hero  width="900px" height="640px" style={{zIndex:1}} fluid={data.file.childImageSharp.fluid} />
   ) 
 }
 
