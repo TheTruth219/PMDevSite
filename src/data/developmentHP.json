@@ -67,7 +67,7 @@
                     "name":"PR Chat",
                     "stack":"Node, React, Express, Auth0",
                     "link":"https://prnetwork-chat.herokuapp.com",
-                    "img":"https://media.giphy.com/media/1ykhYp1xXgSM6zofZT/giphy.gif",
+                    "img":"https://media.giphy.com/media/gJtJtWqov70pICXZPO/giphy.gif",
                     "desc":"A Real-time Secure Chat Client",
                     "copy":"I've always been enthused with the concept of collaboration and sharing ideas. This was a rough idea pitched to a client that centered around community engagement. All you do is sign in with any of the SSO(Single Sign-on) methods, and you can chat with anyone currently signed in"
                 },

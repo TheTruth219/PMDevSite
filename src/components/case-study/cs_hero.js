@@ -18,7 +18,8 @@ img{
     width:100%; 
     max-width:1200px;
     margin:auto;
-    border-radius:7px;
+    ${props =>
+    props.noRadius?`border-radius:0`:`border-radius:7px`}
     box-shadow: 3px 4px 38px -8px rgb(216, 216, 216);
 }
 .copy{
@@ -38,9 +39,9 @@ img{
 `
 
 
-export default function CSHero({data}) {
+export default function CSHero({data},noRadius) {
     return (
-        <CSHeroBase>
+        <CSHeroBase noRadius={noRadius}>
             <div className="copy">
                 <h1>{data.Title}</h1>
                 <h3>{data.Copy}</h3>

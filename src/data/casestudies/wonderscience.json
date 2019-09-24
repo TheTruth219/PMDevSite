@@ -8,7 +8,7 @@
              {
                 "Title":"Wonder Science TV",
                 "Copy":"Wonder Science is a streaming platform dedicated to sharing the beauty of science. The platform has exclusive content that showcases \"Slow-Science\", slow motion videos that reinforce the scientific method through observation.",
-                "Image":"https://media.giphy.com/media/giFOJ2CXm3YGI5EjfQ/giphy.gif",
+                "Image":"https://media.giphy.com/media/eiAafHUhYDiRNUfslp/giphy.gif",
                 "Alt":"wonderscience"
              }
             },
@@ -40,7 +40,7 @@
             {"Takeaways":
                 {
                     "Title":"Takeaways",
-                    "Copy":"While designing for scale, we thought about utilizing the React & React Native ecosystem, but settled on a WordPress hosted platform that addressed our immediate concerns. It was important we had a blog to support the educational aspects are partners were interested in, and that required much less work with WordPress out of the box. Also, our road-map relied on enabling content creators, with an admin portal, to upload and pair content with music. Going this route would allow us to test this with minimal dev time. <br/> <br/> Today Wonder Science is still a growing platform that is available on App Store, Apple Tv, Amazon Fire, and Roku. The product is considered successful with regular use by educators, science enthusiast and the general public. <br/> <br/> Check it out <a href=\"www.wonderscience.com\" target=\"blank\">here</a>."
+                    "Copy":"While designing for scale, we thought about utilizing the React & React Native ecosystem, but settled on a WordPress hosted platform that addressed our immediate concerns. It was important we had a blog to support the educational aspects are partners were interested in, and that required much less work with WordPress out of the box. Also, our road-map relied on enabling content creators, with an admin portal, to upload and pair content with music. Going this route would allow us to test this with minimal dev time. <br/> <br/> Today Wonder Science is still a growing platform that is available on App Store, Apple Tv, Amazon Fire, and Roku. The product is considered successful with regular use by educators, science enthusiast and the general public. <br/> <br/> Check it out <a href=\"http://www.wonderscience.com\" target=\"blank\">here</a>."
                 }
 
             }
