@@ -40,6 +40,7 @@ justify-content:center;
     margin:auto; 
     position:absolute;
     bottom:0;
+    transition:all .6s
     } 
 .hero_img1,.hero_img2 {
     opacity:0;

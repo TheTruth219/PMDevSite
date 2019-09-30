@@ -51,7 +51,7 @@ const NavBarBase = styled.nav`
   background-color:transparent;
   position:fixed;
   top:0;
-  z-index:100;
+  z-index:20;
   min-width:100%;
   transition: all 0.5s;
   @media screen and (min-width: 700px){
@@ -65,7 +65,7 @@ const NavBarBase = styled.nav`
 const MobileNavBase = styled.nav`
   position:fixed;
   top:1;
-  z-index:100;
+  z-index:20;
   min-width:100%;
   transition: all 0.5s;
   background-color:black;
