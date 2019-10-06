@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import data from "../../data/casestudies/prnetwork.json"
 import Analysis from "../../components/case-study/analysis"
 import CSHero from "../../components/case-study/cs_hero"
@@ -19,10 +20,11 @@ const CaseStudy1 = ()=> {
                  <iframe title="PrNetwork Video"width="480px" height="216px" src="https://www.youtube.com/embed/eCMPpufFHaA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </Analysis> 
                 <CommonSection data={data.PrNetwork[4].Product_Evolution}/> 
-                <Analysis direction={true} data={data.PrNetwork[5].Metrics}>
+                <Analysis direction="true" data={data.PrNetwork[5].Metrics}>
                     <img width="382px" alt="pr cards" src="https://web.archive.org/web/20180412204603im_/https://pr.network/bundles/prlanding/img/mobile-cards.png"/>
                 </Analysis>
                 <CommonSection data={data.PrNetwork[6].Takeaways}/>
+                <div style={{display:`flex`,maxWidth:`888px`,margin:`auto`}}><AniLink style={{color:`black`,marginLeft:`auto`,padding:`0 52px 26px 0`,fontWeight:`bold`}} fade to="/product/wonderscience" >Next -> </AniLink></div>
             </Layout>
         );
     

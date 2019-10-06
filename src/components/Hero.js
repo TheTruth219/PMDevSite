@@ -40,6 +40,7 @@ justify-content:center;
     margin:auto; 
     position:absolute;
     bottom:0;
+    transition:all .6s
     } 
 .hero_img1,.hero_img2 {
     opacity:0;
@@ -228,35 +229,35 @@ export default class Hero extends Component {
    }
    render() {
     
-    
+    const {main,grad,head_1,head_2,alt,color,children,Dev} = this.props;
        let MainHero;
 
-       if(this.props.main){
+       if(main){
         MainHero =   
        
-        <HeroBase style={{backgroundImage:this.props.grad}}>
+        <HeroBase style={{backgroundImage:grad}}>
             <div style={{maxWidth: `1300px`,display: `flex`,flexDirection:`column`,position: `relative`,
     justifyContent: `center`}}>
-                <AniLink  style={{left:0}} fade to="/product"><h1 className="product_link"  ref={h1 => this.productHeader = h1} >{this.props.head_1}</h1></AniLink>
+                <AniLink  style={{left:0,cursor:`default`}} fade to="/product"><h1 className="product_link"  ref={h1 => this.productHeader = h1} >{head_1}</h1></AniLink>
                 
-                <AniLink  style={{right:0}} fade to="/development"><h1 className="develop_link" ref={h1 => this.developHeader = h1} >{this.props.head_2}</h1></AniLink>
+                <AniLink  style={{right:0,cursor:`default`}} fade to="/development"><h1 className="develop_link" ref={h1 => this.developHeader = h1} >{head_2}</h1></AniLink>
             
             
 
                 <HeroImage/>
-                <img ref={img => this.productAnimate =img }className="hero_img1" alt={this.props.alt} src={Product}/>
-                <img ref={img => this.devAnimate =img }className="hero_img2" alt={this.props.alt} src={Develop}/> 
-                <img ref={img => this.animationBase =img }className="hero_base" alt={this.props.alt} src={Main}/> 
+                <img ref={img => this.productAnimate =img }className="hero_img1" alt={alt} src={Product}/>
+                <img ref={img => this.devAnimate =img }className="hero_img2" alt={alt} src={Develop}/> 
+                <img ref={img => this.animationBase =img }className="hero_base" alt={alt} src={Main}/> 
             
             </div>
        </HeroBase>
        } else {
          MainHero =  
-        <HeroBase style={{backgroundColor:this.props.color, backgroundImage:this.props.grad}}>
+        <HeroBase style={{backgroundColor:color, backgroundImage:grad}}>
             <div style={{position:`relative`,display:`flex`,flexDirection:`column`,width:`1200px`,justifyContent: `center`}}>
-             <div className="img_container">{this.props.Dev?< DevImage />:<ProdImage />}</div>
+             <div className="img_container">{Dev?< DevImage />:<ProdImage />}</div>
              <div className="hero_children">
-              {this.props.children} 
+              {children} 
              </div> 
             </div>
         </HeroBase> 

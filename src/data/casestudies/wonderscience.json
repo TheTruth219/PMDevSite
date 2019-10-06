@@ -8,7 +8,7 @@
              {
                 "Title":"Wonder Science TV",
                 "Copy":"Wonder Science is a streaming platform dedicated to sharing the beauty of science. The platform has exclusive content that showcases \"Slow-Science\", slow motion videos that reinforce the scientific method through observation.",
-                "Image":"https://media.giphy.com/media/giFOJ2CXm3YGI5EjfQ/giphy.gif",
+                "Image":"https://media.giphy.com/media/eiAafHUhYDiRNUfslp/giphy.gif",
                 "Alt":"wonderscience"
              }
             },
@@ -20,13 +20,13 @@
             {"Product_Analysis":
                 {
                     "Title":"Product Analysis",
-                    "Copy":"Wonder Science focuses on educational science in the form of psychedelic visual and audio stimulation. Delving into topics in biology, physics, chemistry and mineralogy, submerging audiences into different dimensions of various scientific landscapes, uncovering worlds that are all around us but normally unseen. Slow-Science is a media movement that seeks to educate while removing the cognitive complexity of information. The content can range from minutes to three-hour long episodes with the sole purpose of science by observation participation. Content is created by some of the top scientist at Universities and laboratories around the world. A wide variety of music producers and artists have scored and contributed music as well. This video is an example of the content you'd typically find on this platform."
+                    "Copy":"Wonder Science focuses on educational science in the form of psychedelic visual and audio stimulation. It delves into topics in biology, physics, chemistry and mineralogy, submerges audiences into different dimensions of various scientific landscapes, and uncovers worlds that are all around us but normally unseen. \"Slow-Science\" is a media movement that seeks to educate while removing the cognitive complexity of information. The content can range from minutes to three-hour long episodes, with the sole purpose of science by observation participation. Content is created by some of the top scientist at Universities and laboratories around the world. A wide variety of music producers and artists have scored and contributed material as well. This video is an example of the content you'd typically find on this platform."
                 }
             },
             {"Product_Evolution":
                 {
                     "Title":"Product Evolution",
-                    "Copy":"Wonder science is the brainchild of a Hollywood film-producer with a desire to create science you can both view and appreciate on an aesthetic level, yet inspire learning. The concept was to provide a platform to experience the platform's content and make it easily accessible, experiential and catalyzing. At it's early stages, we launched content on YouTube and drove viewers through targeted campaigns. We gained insights on our viewer experience by working closely with high school and higher education institutions. Incorporating the content into curriculum scope allowed us to validate the user experience and identify pain points. Placing content on the largest free video sharing website made it difficult for our viewers to stay focused with the distraction of targeted user channel videos and competitors content. Our insights led us to transform the platform into its own identity by creating a web app. A single source of truth, making its content more accessible and expanding its context. The online identity was born, allowing our viewers to access the Wonder Science content in an easy to use interface. "
+                    "Copy":"Wonder science is the brainchild of a Hollywood film-producer with a desire to create science you can both view and appreciate on an aesthetic level, yet inspire learning. The concept was to provide a medium to experience the platform's content and make it easily accessible, experiential, and catalyzing. At it's early stages, we launched content on YouTube and drove viewers through targeted ad campaigns. We gained insights on our viewer experience by testing and working closely with high school and higher education institutions. Incorporating the content into curriculum scope allowed us to validate the user experience and identify pain points. Placing content on the largest free video sharing website made it difficult for our viewers to stay focused with the distraction of targeted user channel videos and competitors content. Our insights led us to transform the platform into its own identity by creating a web app. A single source of truth, making its content more accessible and expanding its context. The online identity was born, allowing our viewers to access the Wonder Science content in an easy to use interface. "
                 }
 
             },
@@ -40,7 +40,7 @@
             {"Takeaways":
                 {
                     "Title":"Takeaways",
-                    "Copy":"While designing for scale, we thought about utilizing the React & React Native ecosystem, but settled on a WordPress hosted platform that addressed our immediate concerns. It was important we had a blog to support the educational aspects are partners were interested in, and that required much less work with WordPress out of the box. Also, our road-map relied on enabling content creators, with an admin portal, to upload and pair content with music. Going this route would allow us to test this with minimal dev time. <br/> <br/> Today Wonder Science is still a growing platform that is available on App Store, Apple Tv, Amazon Fire, and Roku. The product is considered successful with regular use by educators, science enthusiast and the general public. <br/> <br/> Check it out <a href=\"www.wonderscience.com\" target=\"blank\">here</a>."
+                    "Copy":"While designing for scale, we thought about utilizing the React & React Native ecosystem, but settled on a WordPress hosted platform that addressed our immediate concerns. It was important we had a blog to support the educational aspects our partners were interested in, and that required much less work with WordPress out of the box. Also, our road-map relied on enabling content creators (with an admin portal) to upload and pair content with music. Going this route would allow us to test with minimal dev time. <br/> <br/> Today Wonder Science is still a growing platform that is available on App Store, Apple Tv, Amazon Fire, and Roku. It is considered successful with regular use by educators, science enthusiast and the general public. <br/> <br/> Check it out <a href=\"http://www.wonderscience.com\" target=\"blank\">here</a>."
                 }
 
             }

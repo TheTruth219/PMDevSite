@@ -27,7 +27,7 @@
                         "Research": { "Strategy": 1, "Metrics": 1, "OKR/Roadmaps": 1 ,"Hubspot":1},
                         "OKR/Roadmaps": { "Bus. Dev": 3, "Research": 1 },
                         "Strategy": {"Research": 3, "Leadership": 3, "Metrics": 2, "Hotjar":1},
-                        "Aha!": {"Strategy":2, "OKR/Roadmaps":2, "Leadership":1},
+                        "Aha!": {"Strategy":2, "OKR/Roadmaps":2, "Leadership":1, "Features":2},
                         "User-Feedback":{"Typeform":2, "Hubspot":1, "Hotjar":2,"Metrics":2},
                         "Hubspot":{"Bus. Dev":2,"User-Feedback":1, "Typeform":1, "Metrics":2},
                         "Metrics": {"Hotjar":2}

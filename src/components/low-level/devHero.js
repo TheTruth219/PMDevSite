@@ -37,7 +37,7 @@ const DevImage = () => {
     }
   `)
   return(
-    <ImageBase oncopy={false} oncut= {false} oncontextmenu="return false;" src={data.placeholderImage.childImageSharp.fluid.src} />
+    <ImageBase onCopy="false" onCut= "false" onContextMenu="return false;" src={data.placeholderImage.childImageSharp.fluid.src} />
   ) 
 }
 

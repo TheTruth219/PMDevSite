@@ -55,6 +55,10 @@ li{
         text-align:center;
         padding:0 2em;
     }
+    li {
+        list-style-type:none;
+        font-weight:bold;
+    }
     
 }
 @media screen and (max-width:480px){
@@ -67,12 +71,13 @@ li{
 export default class Analysis extends Component {
 
     render(){
+        const {data,direction,children} = this.props;
         return (
-            <AnalysisBase direction={this.props.direction}>
-                <h2>{this.props.data.Title}</h2>
+            <AnalysisBase direction={direction}>
+                <h2>{data.Title}</h2>
                 <div>
-                    {this.props.children}
-                    <p dangerouslySetInnerHTML={{ __html: this.props.data.Copy }}/>
+                    {children}
+                    <p dangerouslySetInnerHTML={{ __html: data.Copy }}/>
                 </div>
                         
             </AnalysisBase>

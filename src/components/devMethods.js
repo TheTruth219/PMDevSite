@@ -1,5 +1,5 @@
 
-import React, { Component } from "react"
+import React from "react"
 import styled from "styled-components"
 import {FaMobileAlt,FaCog,FaBoxes,FaChartBar} from "react-icons/fa";
 import { IconContext} from "react-icons";
@@ -28,12 +28,9 @@ h1 {
 
 
 `
-export default class Methods extends Component {
+export default function Methods({data}) {
    
-
-render(){
     
- 
    return(
     <MethodsBase>
      <IconContext.Provider value={{ style: { verticalAlign: 'middle', margin:'auto',
@@ -41,19 +38,19 @@ render(){
         <h1>Methodology</h1>
         <Hr height="4px"width="40px" grad="linear-gradient(45deg,#05D3DE,#28C4F0)"/>
         <div className="skills_container"style={{display:"flex", flexDirection:"row", maxWidth:"1200px",margin:"auto"}}>
-            <Skills header={this.props.data[0][0]} copy={this.props.data[0][1]}> 
+            <Skills header={data[0][0]} copy={data[0][1]}> 
                 <FaMobileAlt /> 
             </Skills>
 
-            <Skills header={this.props.data[1][0]} copy={this.props.data[1][1]}> 
+            <Skills header={data[1][0]} copy={data[1][1]}> 
                 <FaCog/> 
             </Skills>
 
-            <Skills header={this.props.data[2][0]} copy={this.props.data[2][1]}> 
+            <Skills header={data[2][0]} copy={data[2][1]}> 
                 <FaBoxes/> 
             </Skills>
 
-            <Skills header={this.props.data[3][0]} copy={this.props.data[3][1]}> 
+            <Skills header={data[3][0]} copy={data[3][1]}> 
                 <FaChartBar/> 
             </Skills>
         </div>
@@ -63,7 +60,7 @@ render(){
     
    );
   }
-}
 
 
 
+ 
