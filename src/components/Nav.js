@@ -41,6 +41,10 @@ const LinkBase = styled.li`
   @media screen and (max-width: 700px){
     a {
       color:white;
+      
+      &:active, &:hover:before,&:hover:after{
+        width: 0%;  
+      }
     }
   }
   
@@ -77,6 +81,7 @@ const MobileNavBase = styled.nav`
     display: flex;
     align-items: center;
     padding: 25px 0 19px 10px;
+    cursor: pointer;
 
     &_line{
       background-color: white;
@@ -133,28 +138,40 @@ export default class Nav extends Component {
   }
    
     
-  expand = ()=>{
-    this.hamburger.classList.toggle('animate');
-    let routes = ["product/","development/","/blog"];
-
-          if(this.path === "/" || routes.some(word => this.path.includes(word))){
-            if(this.mobileNav.style.height==="250px"){
-              this.mobileNav.style.height = "45px";
-              this.setState({expanded:false})
-              }else{
-              this.mobileNav.style.height = "250px";
-              this.setState({expanded:true})
+  expand = (e)=>{
+    let toggleFunction = () =>{
+      this.hamburger.classList.toggle('animate');
+      //Define routes that need certain navigation heights due to menu
+      let routes = ["product/","development/","/blog"];
+  
+            if(this.path === "/" || routes.some(word => this.path.includes(word))){
+              if(this.mobileNav.style.height==="250px"){
+                this.mobileNav.style.height = "45px";
+                this.setState({expanded:false})
+                }else{
+                this.mobileNav.style.height = "250px";
+                this.setState({expanded:true})
+                }
+            }else{
+              if(this.mobileNav.style.height==="400px"){
+                this.mobileNav.style.height = "45px";
+                this.setState({expanded:false})
+              } else {
+              this.mobileNav.style.height = "400px";
+              this.setState({expanded:true});
               }
-          }else{
-            if(this.mobileNav.style.height==="400px"){
-              this.mobileNav.style.height = "45px";
-              this.setState({expanded:false})
-            } else {
-            this.mobileNav.style.height = "400px";
-            this.setState({expanded:true});
             }
-          }
-           
+    }
+    if(e.currentTarget === this.hamburger){
+      e.stopPropagation()
+      toggleFunction();
+
+             
+    } else if(this.state.expanded === true) {
+      toggleFunction();
+
+    }
+
      
   }
 
@@ -193,17 +210,26 @@ export default class Nav extends Component {
         } 
           
           
-        this.hamburger.addEventListener('click', () => {
-          this.expand();  
+        this.hamburger.addEventListener('click', (e) => {
+          this.expand(e);  
+        });
+        
+
+        window.addEventListener('click',(e) => {
+          this.expand(e)
         });
         
       }
   }
  componentWillUnmount(){
-   this.setState({expanded:false})
+   this.setState({expanded:false});
    this.hamburger.removeEventListener('click', () => {
     this.expand();  
   }); 
+  window.removeEventListener('click',(e) => {
+    this.expand(e)
+  });
+   
  }
        
 render(){
