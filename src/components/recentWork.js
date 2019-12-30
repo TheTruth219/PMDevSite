@@ -22,16 +22,20 @@ export default class RecentWork extends Component {
        
  
 render(){
-    if(this.props.dev){
-            this.DevCards = this.props.data.map((card,index) => (
+    if (this.props.dev){
+            this.DevCards = this.props.data.map((card,index) => 
            <Card 
             data={card} 
-            key={index}/>  
+            key={index}
+            />  
                
-        ));  
+        );  
     }else{
             this.ProductCards = this.props.data.map((card,index)=>
-            <ProductCard data={card} key={index}/>
+            <ProductCard 
+             data={card} 
+             key={index}
+             />
         );
     }
     

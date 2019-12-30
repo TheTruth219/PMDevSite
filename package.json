@@ -1,6 +1,6 @@
 {
   "name": "pm-dev-portfolio",
-  "private": true,
+  "private": false,
   "description": "A Hybrid Portfolio site",
   "version": "0.1.0",
   "author": "Stephen Powers",
