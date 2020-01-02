@@ -35,12 +35,12 @@ module.exports = {
         defaultQuality: 75,
       },
     },
-    {
-      resolve: `gatsby-transformer-json`,
-      options:{
-        typeName:`json`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-transformer-json`,
+    //   options:{
+    //     typeName:`json`,
+    //   },
+    // },
     
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
