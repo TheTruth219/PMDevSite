@@ -33,7 +33,11 @@ p {
     max-width:800px;
     padding: 0 20px 0 20px;
     margin:auto;
+    margin-top: 3em;
     text-align: center;
+}
+a {
+    margin-top: 3em;
 }
 
 `
@@ -44,7 +48,7 @@ const CaseStudy1 = ()=> {
         return (
             <Layout data={data.PrNetwork[0].Navigation}  >
                 <SEO title="Case Study" />
-                <MainDiv style={{height:`100vh`,display:`flex`,alignItems:`center`,justifyContent:`center`}}>
+                <MainDiv style={{display:`flex`,alignItems:`center`,justifyContent:`center`}}>
                     <h1 style={{textAlign:"center"}}> PetSmart - Case Study</h1>
                     <p>This is a discovery case study that takes a holistic look at the business and the most exciting areas for growth. The goal of this exercise was to discover new ways to empower the customer experience to drive revenue. I've created a PDF that samples my approach to new products or features.</p>
                     <a href={caseStudy}>
