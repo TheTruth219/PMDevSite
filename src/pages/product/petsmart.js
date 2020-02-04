@@ -9,7 +9,6 @@ import caseStudy from "../../images/PetSmart-CaseStudy.pdf"
 
 const MainDiv = styled.div`
 
-height: 100vh;
 display: flex;
 flex-direction: column;
 align-items: center;
