@@ -4,7 +4,7 @@
             "Navigation":["Home","About","Tools","Projects","Contact","Blog","Development"]
         },
         {
-            "About":"<b>Life and technology mirror each other</b> in so many ways. With life as the individual grows so does the responsibility. It takes a village to raise a child, and it takes a solid team to bring a product to life and on through maturity. I catalyze talented people around a solid product vision, and lead by serving and empowering those talented people to bring that vision to life. I consider myself a systematic creative, making the hard things simple using a multi-faceted approach to understanding and solving problems, listening to the voice of the user and collaborating and enabling teams to do their best work. I enjoy the complexity of uncertainty, embracing optimism and the opportunities that come with the life of a product. "   
+            "About":"<b>Life and technology</b> mirror each other in so many ways. With life as the individual grows, so does the responsibility. It takes a village to raise a child, and it takes a reliable team to bring a product to life and on through maturity. I catalyze talented people around a solid product vision and lead by serving and empowering those gifted people to bring that vision to life. I consider myself a systematic creative, making the hard things simple using a multi-faceted approach to understanding and solving problems, listening to the voice of the user, and collaborating and enabling teams to do their best work. I enjoy the complexity of uncertainty, embracing optimism, and the opportunities that come with the life of a product."   
         },
         {
             "Methods":[
@@ -18,7 +18,7 @@
             "Value" : [
                 {"title":"My Skillset"},
                 {"subtitle":"My Tools"},
-                {"copy":"Ultimately tools are meant to assist the user in accomplishing a particular task at hand. These are the tools that help me implement my methodology and ultimately empower my team and I to manage products successfully. This visualization is meant to drive-home a deeper understanding in how these tools relate to one-another and essentially help move the needle."},
+                {"copy":"Ultimately tools are meant to assist the user in accomplishing a particular task at hand. These are the tools that help me implement my methodology and ultimately empower my team and me to manage products successfully. This visualization is meant to drive-home a more in-depth understanding of how these tools relate to one another and primarily help move the needle."},
                 {
                     "chartData":{
                         "Leadership": { "OKR/Roadmaps": 1, "Requirements": 1, "Research": 1,"Features":1,"Strategy":1},
