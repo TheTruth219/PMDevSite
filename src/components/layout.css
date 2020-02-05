@@ -618,7 +618,6 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-
 .loader__div {
   height: 100vh;
   width: 100vw;

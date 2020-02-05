@@ -10,7 +10,7 @@ const LinkBase = styled.li`
   margin-top:1em;
   margin-bottom:1em;
   position:relative;
-  
+ 
   a{
     color:white;
     text-decoration:none;
@@ -110,6 +110,7 @@ const MobileNavBase = styled.nav`
     }
     
   }
+  
   .hamburger.animate .hamburger_line{
     background-color:transparent;
 
