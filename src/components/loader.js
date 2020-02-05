@@ -19,7 +19,7 @@ img{
 
 export default function Loader({loading,src}) {
     return (
-        <Container class="loader__div" loading={loading}>
+        <Container className="loader__div" loading={loading}>
             <img height="100px" width="100px" alt="loading" src={src}/>
         </Container>
     )
