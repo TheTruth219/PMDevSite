@@ -20,27 +20,27 @@
             {"Product_Analysis":
                 {
                     "Title":"Product Analysis",
-                    "Copy":"This video explains the overall concept of how the platform works and the role the users play in the reputation management process. Users log into the platform and vote in a binary fashion on celebrities and brands. The benefit of going binary was to be able to get more data in a straight-forward way from users. In order to prevent bad actors, or people logging into the system attempting to manipulate the voting pool, we created a system called BBV or Balanced Binary Voting. This ensured that as the product scaled and opinions became more diverse, we could spot bad actors much more quickly and ensure the fidelity of our feedback."
+                    "Copy":"This video explains the overall concept of how the platform works and the role the users play in the reputation management process. Users log into the platform and vote in a binary fashion on celebrities and brands. The benefit of going binary was to be able to get more data in a straight-forward way from users. To prevent bad actors, or people logging into the system attempting to manipulate the voting pool, we created a system called BBV or Balanced Binary Voting. BBV guaranteed that as the product scaled and opinions became more diverse, we could spot bad actors much more quickly and ensure the fidelity of our feedback."
                 }
             },
             {"Product_Evolution":
                 {
                     "Title":"Product Evolution",
-                    "Copy":"PR Network originated from the founders wanting to have a decentralized way of measuring public sentiment. Celebrities and companies have a major impact on our day to day lives, and it only seemed fitting the public be able to have a say so about the people and brands that have that type of influence. Ultimately, the goal was to create a central platform, powered by public feedback, for celebrities and companies to be able to gauge the public sentiment of their brand.<br/><br/> We were able to validate the idea and concept with a few PR contacts working at industry leading firms in Los Angeles. We developed our original design and tested it in the wild, and were able to validate the need for an alternate user experience to expedite the time it took to get users logged in to vote. The road-map initially had funds earmarked for an app, but interviews and research into the user-flow and personas ultimately didn’t support that experience. In the end, we arrived at an api driven solution that would cut down on our marketing spend by leveraging existing audiences on blogs and publications."
+                    "Copy":"PR Network originated from the founders wanting to have a decentralized way of measuring public sentiment. Celebrities and companies have a significant impact on our day to day lives, and it only seemed fitting for the public to be able to have a say-so about the people and brands that have that type of influence. Ultimately, the goal was to create a central platform, powered by public feedback, for celebrities and companies to be able to gauge the general sentiment of their brand.<br/><br/> We were able to validate the idea and concept with a few PR contacts working at industry-leading firms in Los Angeles. We developed our original design and tested it in the wild, and were able to validate the need for alternate user experience to expedite the time it took to get users logged in to vote. The road-map initially had funds earmarked for an app, but interviews and research into the user-flow and personas ultimately didn’t support that experience. In the end, we arrived at an API driven solution that would cut down on our marketing spend by leveraging existing audiences on blogs and publications."
                 }
 
             },
             {"Metrics":
                 {
                     "Title":"Metrics",
-                    "Copy":"We noticed an immediate uptick in new users which inflated metrics we were tracking. Unlike products that monetize time on the platform, our main concern was the frequency users participated in voting cycles. We found a higher voter frequency co-related with more user sign-ups and referrals. Through a close look at cohorts, we were able to verify the new experience had a very positive impact on increasing our CPF (Cycle Participation Frequency), which was the outcome we were hoping for."
+                    "Copy":"We noticed an immediate uptick in new users, which inflated metrics we were tracking. Unlike products that monetize time on the platform, our main concern was the frequency users participated in voting cycles. We found a higher voter frequency co-related with more user sign-ups and referrals. Through a close look at cohorts, we were able to verify the new experience had a very positive impact on increasing our CPF (Cycle Participation Frequency), which was the desired outcome."
                 }
 
             },
             {"Takeaways":
                 {
                     "Title":"Takeaways",
-                    "Copy":"We had imagined the platform being its most potent as a SASS offering. In order to evolve it toward that end, it was decided that anchoring BBV into the blockchain would make a lot of sense. We believed also planned on moving in the direction of an ICO once the user-base had gotten significant enough. Today, PR Network has pivoted a bit from this direction, but has used that increased traffic to have a successful ICO launch and the platform is still in use as they work toward releasing a public API. <br/><br/>Check it out <a href=\"http://www.pr.network\" target=\"blank\">here.</a>"
+                    "Copy":"We had imagined the platform it's most potent as a SASS offering. We decided that anchoring BBV into the blockchain would make a lot of sense, to evolve it toward that end. We believed also planned on moving in the direction of an ICO once the user-base had gotten significant enough. Today, PR Network has pivoted a bit from this direction but has used that increased traffic to have a successful ICO launch, and the platform is still in use as they work toward releasing a public API. <br/><br/>Check it out <a href=\"http://www.pr.network\" target=\"blank\">here.</a>"
                 }
 
             }

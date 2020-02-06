@@ -618,6 +618,10 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+.loader__div {
+  height: 100vh;
+  width: 100vw;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
