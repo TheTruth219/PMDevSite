@@ -1,16 +1,43 @@
 module.exports = {
   siteMetadata: {
     title: `Nice to meet you.`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `This is portfolio meant to showcase both product management and development skills. Thanks for checking me out.`,
     author: `Stephen Powers`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-157975049-1",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: true,
+        // Setting this parameter is optional
+        anonymize: false,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 5000,
+        // Enables Google Optimize using your container Id
+        optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
+        // Enables Google Optimize Experiment ID
+        experimentId: "YOUR_GOOGLE_EXPERIMENT_ID",
+        // Set Variation ID. 0 for original 1,2,3....
+        variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
+        // Any additional optional fields
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "stephenpowers.tech",
+      }
+    },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         minify: false, // Breaks styles if not set to false
       },
     },
+
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-transition-link`,
     {
