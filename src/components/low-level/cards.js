@@ -2,6 +2,7 @@ import React from 'react'
 import styled from "styled-components"
 import {FaNode,FaReact,FaSass,FaSalesforce,FaGrunt} from "react-icons/fa"
 import { IconContext} from "react-icons";
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 
 
@@ -67,16 +68,16 @@ const Card = ({data}) => {
     })
     return (
         <CardBase >
-            
-            <IconContext.Provider value={{ style: { verticalAlign: 'middle', margin:'5px'} }}>
-                <h3>{data.name}</h3> 
-                <a target="blank" href={data.link}>
-                <img style={{alignSelf:`center`}}width="288px" height="180px"alt="card" src={data.img}/>
-                </a>
-                <h4>{data.desc}</h4>
-                <p>{finalStack}</p>
-            </IconContext.Provider>
-            
+            <OutboundLink target="blank" href={data.link}>
+                <IconContext.Provider value={{ style: { verticalAlign: 'middle', margin:'5px'} }}>
+                    <h3>{data.name}</h3> 
+                    
+                    <img style={{alignSelf:`center`}}width="288px" height="180px"alt="card" src={data.img}/>
+                    
+                    <h4>{data.desc}</h4>
+                    <p>{finalStack}</p>
+                </IconContext.Provider>
+            </OutboundLink>
         </CardBase>
     )
 }
