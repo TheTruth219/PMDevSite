@@ -13,6 +13,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: `1730511`,
+        sv: 6
+      },
+    },
+    {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         minify: false, // Breaks styles if not set to false
