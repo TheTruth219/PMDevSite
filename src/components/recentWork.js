@@ -12,14 +12,6 @@ display:flex;
 flex-direction: column;
 padding:60px 0 30px 0;
 background-color:#F8F8F8;
-.product_work{
-    max-width:1200px;
-    display:flex;
-    flex-direction:row;
-    margin:auto;
-    flex-wrap: wrap;
-    justify-content:center;
-}
 
     h1{
         text-align:center;
@@ -93,7 +85,7 @@ render(){
                             {this.DevCards}
                         </Slider>
                       </div> ;
-    let Product = <div className="product_work">{this.ProductCards}</div>;
+    let Product = <div style={{maxWidth:`1200px`,display:`flex`,flexDirection:`row`,margin:`auto`,flexWrap:`wrap`}}>{this.ProductCards}</div>;
 
     
     
