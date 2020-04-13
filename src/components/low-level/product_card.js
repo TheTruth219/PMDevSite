@@ -6,7 +6,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const CardBase = styled.div`
 
-width:25%;
+width:33.3%;
 border-radius: 6px;
 transition:transform 0.3s;
 
@@ -18,7 +18,7 @@ a {
      z-index:10;
  }
 @media screen and (max-width:800px){
-    width:50%;
+    width:70%;
 }
 @media screen and (max-width:400px){
     width:100%;
